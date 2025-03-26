@@ -14,9 +14,9 @@ public class SitEntity extends Entity {
         super(entityType, world);
     }
 
-    public SitEntity(World world, BlockPos pos) {
+    public SitEntity(World world, BlockPos pos, double yLevel) {
         this(Netherite.RegistryEvents.SIT_ENTITY, world); // Use armor stand or register your own entity type
-        this.setPosition(pos.getX() + 0.5, pos.getY() + 0.4, pos.getZ() + 0.5);
+        this.setPosition(pos.getX() + 0.5, pos.getY() + yLevel, pos.getZ() + 0.5);
     }
 
     @Override

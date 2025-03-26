@@ -17,7 +17,7 @@ public abstract class BlockSitteable extends BlockBase {
     public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, net.minecraft.util.math.BlockRayTraceResult hit) {
         if (!world.isRemote && !(player instanceof FakePlayer)) {
             if (!player.isPassenger()) {
-                SitEntity seat = new SitEntity(world, pos);
+                SitEntity seat = new SitEntity(world, pos, 0.4);
                 world.addEntity(seat);
                 player.startRiding(seat);
             }
