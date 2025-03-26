@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-    "layer0": "mwc_netherite:item/office_chair"
+    "layer0": "mwc_netherite:item/office_chair_2"
   },
   "display": {
     "thirdperson_righthand": {
