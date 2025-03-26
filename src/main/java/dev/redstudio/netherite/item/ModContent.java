@@ -69,7 +69,7 @@ public class ModContent {
 
     private static RegistryObject<Block> registerBlockWithItem(String name, Supplier<Block> blockSupplier) {
         RegistryObject<Block> block = BLOCKS.register(name, blockSupplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(ModItemGroup.GEOPOLRESOURCES_GROUP)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(ModItemGroup.ITEM_GROUP)));
         return block;
     }
 
