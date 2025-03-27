@@ -2,20 +2,11 @@ package dev.redstudio.netherite;
 
 import dev.redstudio.netherite.item.ModContent;
 import dev.redstudio.netherite.entity.SitEntity;
-import dev.redstudio.netherite.item.barrier.BarrierModel;
-import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
-import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
-import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
-import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
-import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
-import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
-import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1Model;
-import dev.redstudio.netherite.item.desk.middle.DeskMiddleModel;
-import dev.redstudio.netherite.item.desk.right.DeskRightModel;
-import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
+import dev.redstudio.netherite.item.TileEntityModelInfo;
 import dev.redstudio.netherite.entity.SitEntityRenderer;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -36,16 +27,16 @@ public class Netherite
     public static final String MOD_ID = "mwc_netherite";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Netherite() {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModContent.BLOCKS.register(eventBus);
+        ModContent.TILE_ENTITY_TYPES.register(eventBus);
         ModContent.ITEMS.register(eventBus);
 
-        ModContent.TILE_ENTITY_TYPES.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -73,29 +64,20 @@ public class Netherite
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            // Register general entity rendering handlers
             RenderingRegistry.registerEntityRenderingHandler(RegistryEvents.SIT_ENTITY, SitEntityRenderer::new);
 
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_CORNERALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerAlt1Model()));
+            // Loop through the TILE_ENTITY_MODEL_INFOS list to register tile entity renderers
+            for (TileEntityModelInfo tileEntityModelInfo : ModContent.TILE_ENTITY_MODEL_INFOS) {
+                TileEntityType<?> tileEntityType = tileEntityModelInfo.getTileEntityType().get();
 
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_LEFTALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskLeftAlt1Model()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_RIGHTALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskRightAlt1Model()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_CORNER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_MIDDLE_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskMiddleModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_RIGHT_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskRightModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_LEFT_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskLeftModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.BARRIER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/barrier.png").setModel(new BarrierModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.HOME_CHAIR_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/homechair.png").setModel(new HomeChairModel()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.OFFICE_CHAIR_1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/officechair.png").setModel(new OfficeChair1Model()));
-
-            ClientRegistry.bindTileEntityRenderer(ModContent.OFFICE_CHAIR_2_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/officechair.png").setModel(new OfficeChair2Model()));
+                // Bind the tile entity renderer dynamically
+                ClientRegistry.bindTileEntityRenderer(tileEntityType, (dispatcher) ->
+                        new TileRenderer(dispatcher)
+                                .setTexture(tileEntityModelInfo.textureInfo) // Set texture from ModelTextureInfo
+                                .setModel(tileEntityModelInfo.modelInfo) // Create model dynamically
+                );
+            }
         }
     }
 }
