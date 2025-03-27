@@ -37,6 +37,9 @@ import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1TileEntity;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
+import dev.redstudio.netherite.item.tv.TVBlock;
+import dev.redstudio.netherite.item.tv.TVModel;
+import dev.redstudio.netherite.item.tv.TVTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
@@ -63,6 +66,7 @@ public class ModContent {
     public static final ArrayList<TileEntityModelInfo> TILE_ENTITY_MODEL_INFOS = new ArrayList<>();
 
     // Blocks with Items
+    public static final RegistryObject<Block> TV_BLOCK = registerBlockWithItem("tv_block", TVBlock::new);
     public static final RegistryObject<Block> PC_BLOCK = registerBlockWithItem("pc_block", PCBlock::new);
     public static final RegistryObject<Block> BARRIER_BLOCK = registerBlockWithItem("barrier_block", BarrierBlock::new);
     public static final RegistryObject<Block> HOME_CHAIR_BLOCK = registerBlockWithItem("home_chair_block", HomeChairBlock::new);
@@ -77,6 +81,7 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
 
     // Tile Entities
+    public static final RegistryObject<TileEntityType<TileEntity>> TV_TILE_ENTITY = registerTileEntity("tv_tile_entity", TVTileEntity::new, TV_BLOCK, new TVModel(), "textures/block/tv.png");
     public static final RegistryObject<TileEntityType<TileEntity>> PC_TILE_ENTITY = registerTileEntity("pc_tile_entity", PCTileEntity::new, PC_BLOCK, new PCModel(), "textures/block/pc.png");
     public static final RegistryObject<TileEntityType<TileEntity>> BARRIER_TILE_ENTITY = registerTileEntity("barrier_tile_entity", BarrierTileEntity::new, BARRIER_BLOCK, new BarrierModel(), "textures/block/barrier.png");
     public static final RegistryObject<TileEntityType<TileEntity>> HOME_CHAIR_TILE_ENTITY = registerTileEntity("home_chair_tile_entity", HomeChairTileEntity::new, HOME_CHAIR_BLOCK, new HomeChairModel(), "textures/block/homechair.png");
