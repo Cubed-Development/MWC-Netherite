@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "mwc_netherite:block/desk_corner_alt1" }
+    "": { "model": "mwc_netherite:block/tileentity" }
   }
 }

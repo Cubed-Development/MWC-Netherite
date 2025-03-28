@@ -8,7 +8,9 @@ MWC's props ported to 1.16.5!
 * All Desk Props
 * All Chairs
   * Chairs also can be sat on!
-* Barrier Prop
+* Barrier
+* PC
+* TV
 
 Plans are to port over every single prop from MWC, but be patient because this takes time.
 

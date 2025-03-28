@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "mwc_netherite:block/desk_left" }
+    "": { "model": "mwc_netherite:block/tileentity" }
   }
 }
