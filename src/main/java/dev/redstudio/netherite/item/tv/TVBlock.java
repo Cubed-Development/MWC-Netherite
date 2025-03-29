@@ -16,7 +16,7 @@ public class TVBlock extends BlockBase {
 
     //16 = 1 block
     private static final VoxelShape BASE_SHAPE = VoxelShapes.or(
-            Block.makeCuboidShape(-16, 0, 0, 32, 26, 8)
+            Block.makeCuboidShape(-16, 0, 4, 32, 26, 8)
     );
 
     public TVBlock() {}
