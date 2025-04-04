@@ -34,6 +34,9 @@ import dev.redstudio.netherite.item.desk.right.DeskRightTileEntity;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Block;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1TileEntity;
+import dev.redstudio.netherite.item.laptop.LaptopBlock;
+import dev.redstudio.netherite.item.laptop.LaptopModel;
+import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
@@ -45,10 +48,11 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -79,6 +83,7 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_MIDDLE = registerBlockWithItem("desk_middle_block", DeskMiddleBlock::new);
     public static final RegistryObject<Block> DESK_CORNER = registerBlockWithItem("desk_corner_block", DeskCornerBlock::new);
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
+    public static final RegistryObject<Block> LAPTOP_BLOCK = registerBlockWithItem("laptop_block", LaptopBlock::new);
 
     // Tile Entities
     public static final RegistryObject<TileEntityType<TileEntity>> TV_TILE_ENTITY = registerTileEntity("tv_tile_entity", TVTileEntity::new, TV_BLOCK, new TVModel(), "textures/block/tv.png");
@@ -94,6 +99,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_MIDDLE_TILE_ENTITY = registerTileEntity("desk_middle_tile_entity", DeskMiddleTileEntity::new, DESK_MIDDLE,  new DeskMiddleModel(), "textures/block/desk.png");
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNER_TILE_ENTITY = registerTileEntity("desk_corner_tile_entity", DeskCornerTileEntity::new, DESK_CORNER,  new DeskCornerModel(), "textures/block/desk.png");
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1,  new DeskCornerAlt1Model(), "textures/block/desk.png");
+    public static final RegistryObject<TileEntityType<TileEntity>> LAPTOP_TILE_ENTITY = registerTileEntity("laptop_tile_entity", LaptopTileEntity::new, LAPTOP_BLOCK,  new LaptopModel(), "textures/block/pc.png");
 
     private static RegistryObject<Block> registerBlockWithItem(String name, Supplier<Block> blockSupplier) {
         RegistryObject<Block> block = BLOCKS.register(name, blockSupplier);
@@ -115,5 +121,15 @@ public class ModContent {
         TILE_ENTITY_MODEL_INFOS.add(new TileEntityModelInfo(tileEntityType, modelInfo, textureInfo));
 
         return tileEntityType;
+    }
+
+    public static class ModItemGroup {
+
+        public static final ItemGroup ITEM_GROUP = new ItemGroup("mwc_netherite") {
+            @Override
+            public ItemStack createIcon() {
+                return new ItemStack(BARRIER_BLOCK.get());
+            }
+        };
     }
 }
