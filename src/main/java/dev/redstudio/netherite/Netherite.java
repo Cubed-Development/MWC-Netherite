@@ -34,14 +34,12 @@ public class Netherite
     public Netherite() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, dev.redstudio.netherite.ModConfig.COMMON_CONFIG);
 
-
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModContent.BLOCKS.register(eventBus);
         ModContent.TILE_ENTITY_TYPES.register(eventBus);
         ModContent.ITEMS.register(eventBus);
-
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

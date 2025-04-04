@@ -43,6 +43,9 @@ import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
+import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
+import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
+import dev.redstudio.netherite.item.swat_truck.SwatTruckTileEntity;
 import dev.redstudio.netherite.item.tv.TVBlock;
 import dev.redstudio.netherite.item.tv.TVModel;
 import dev.redstudio.netherite.item.tv.TVTileEntity;
@@ -88,6 +91,7 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
     public static final RegistryObject<Block> LAPTOP_BLOCK = registerBlockWithItem("laptop_block", LaptopBlock::new);
     public static final RegistryObject<Block> CAUTION_BLOCK = registerBlockWithItem("caution_sign_block", CautionBlock::new);
+    public static final RegistryObject<Block> SWAT_TRUCK_BLOCK = registerBlockWithItem("swat_truck_block", SwatTruckBlock::new);
 
     // Tile Entities
     public static final RegistryObject<TileEntityType<TileEntity>> TV_TILE_ENTITY = registerTileEntity("tv_tile_entity", TVTileEntity::new, TV_BLOCK, new TVModel(), "textures/block/tv.png");
@@ -105,6 +109,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1,  new DeskCornerAlt1Model(), "textures/block/desk.png");
     public static final RegistryObject<TileEntityType<TileEntity>> LAPTOP_TILE_ENTITY = registerTileEntity("laptop_tile_entity", LaptopTileEntity::new, LAPTOP_BLOCK,  new LaptopModel(), "textures/block/pc.png");
     public static final RegistryObject<TileEntityType<TileEntity>> CAUTION_TILE_ENTITY = registerTileEntity("caution_tile_entity", CautionTileEntity::new, CAUTION_BLOCK,  new CautionSignModel(), "textures/block/cautionsign.png");
+    public static final RegistryObject<TileEntityType<TileEntity>> SWAT_TRUCK_TILE_ENTITY = registerTileEntity("swat_truck_tile_entity", SwatTruckTileEntity::new, SWAT_TRUCK_BLOCK,  new SwatTruckModel(), "textures/block/swattruck.png");
 
     private static RegistryObject<Block> registerBlockWithItem(String name, Supplier<Block> blockSupplier) {
         RegistryObject<Block> block = BLOCKS.register(name, blockSupplier);
