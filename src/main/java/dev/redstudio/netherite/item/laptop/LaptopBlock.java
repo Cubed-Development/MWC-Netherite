@@ -1,7 +1,6 @@
 package dev.redstudio.netherite.item.laptop;
 
 import dev.redstudio.netherite.item.BlockBase;
-import dev.redstudio.netherite.item.desk.right.DeskRightTileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockReader;
