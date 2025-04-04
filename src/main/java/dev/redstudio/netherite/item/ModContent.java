@@ -4,6 +4,9 @@ import dev.redstudio.netherite.Netherite;
 import dev.redstudio.netherite.item.barrier.BarrierBlock;
 import dev.redstudio.netherite.item.barrier.BarrierModel;
 import dev.redstudio.netherite.item.barrier.BarrierTileEntity;
+import dev.redstudio.netherite.item.caution_sign.CautionBlock;
+import dev.redstudio.netherite.item.caution_sign.CautionSignModel;
+import dev.redstudio.netherite.item.caution_sign.CautionTileEntity;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairBlock;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairTileEntity;
@@ -84,6 +87,7 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_CORNER = registerBlockWithItem("desk_corner_block", DeskCornerBlock::new);
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
     public static final RegistryObject<Block> LAPTOP_BLOCK = registerBlockWithItem("laptop_block", LaptopBlock::new);
+    public static final RegistryObject<Block> CAUTION_BLOCK = registerBlockWithItem("caution_sign_block", CautionBlock::new);
 
     // Tile Entities
     public static final RegistryObject<TileEntityType<TileEntity>> TV_TILE_ENTITY = registerTileEntity("tv_tile_entity", TVTileEntity::new, TV_BLOCK, new TVModel(), "textures/block/tv.png");
@@ -100,6 +104,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNER_TILE_ENTITY = registerTileEntity("desk_corner_tile_entity", DeskCornerTileEntity::new, DESK_CORNER,  new DeskCornerModel(), "textures/block/desk.png");
     public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1,  new DeskCornerAlt1Model(), "textures/block/desk.png");
     public static final RegistryObject<TileEntityType<TileEntity>> LAPTOP_TILE_ENTITY = registerTileEntity("laptop_tile_entity", LaptopTileEntity::new, LAPTOP_BLOCK,  new LaptopModel(), "textures/block/pc.png");
+    public static final RegistryObject<TileEntityType<TileEntity>> CAUTION_TILE_ENTITY = registerTileEntity("caution_tile_entity", CautionTileEntity::new, CAUTION_BLOCK,  new CautionSignModel(), "textures/block/cautionsign.png");
 
     private static RegistryObject<Block> registerBlockWithItem(String name, Supplier<Block> blockSupplier) {
         RegistryObject<Block> block = BLOCKS.register(name, blockSupplier);
