@@ -1,8 +1,9 @@
 package dev.redstudio.netherite.item.swat_truck;
 
-import dev.redstudio.netherite.item.ModContent;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import dev.redstudio.netherite.item.ModContent;
+
 
 public class SwatTruckTileEntity extends TileEntity {
 

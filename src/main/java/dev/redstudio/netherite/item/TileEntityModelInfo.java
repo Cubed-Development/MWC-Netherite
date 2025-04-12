@@ -6,19 +6,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 
-public class TileEntityModelInfo {
-    private final RegistryObject<TileEntityType<TileEntity>> tileEntityType;
-    public final EntityModel<Entity> modelInfo;
-    public final String textureInfo;
+public class TileEntityModelInfo<T extends TileEntity> {
+    public final RegistryObject<TileEntityType<T>> type;
+    public final EntityModel<Entity> model;
+    public final String texture;
 
-
-    public TileEntityModelInfo(RegistryObject<TileEntityType<TileEntity>> tileEntityType, EntityModel<Entity>  modelInfo, String textureInfo) {
-        this.tileEntityType = tileEntityType;
-        this.modelInfo = modelInfo;
-        this.textureInfo = textureInfo;
-    }
-
-    public RegistryObject<TileEntityType<TileEntity>> getTileEntityType() {
-        return tileEntityType;
+    public TileEntityModelInfo(RegistryObject<TileEntityType<T>> type, EntityModel<Entity> model, String texture) {
+        this.type = type;
+        this.model = model;
+        this.texture = texture;
     }
 }

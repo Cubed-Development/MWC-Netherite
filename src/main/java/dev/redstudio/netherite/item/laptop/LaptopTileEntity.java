@@ -1,7 +1,7 @@
 package dev.redstudio.netherite.item.laptop;
 
-import dev.redstudio.netherite.item.ModContent;
 import net.minecraft.tileentity.TileEntity;
+import dev.redstudio.netherite.item.ModContent;
 
 public class LaptopTileEntity extends TileEntity {
 

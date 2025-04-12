@@ -2,8 +2,8 @@ package dev.redstudio.netherite.item.desk.middle;
 
 
 
-import dev.redstudio.netherite.item.ModContent;
 import net.minecraft.tileentity.TileEntity;
+import dev.redstudio.netherite.item.ModContent;
 
 public class DeskMiddleTileEntity extends TileEntity {
 

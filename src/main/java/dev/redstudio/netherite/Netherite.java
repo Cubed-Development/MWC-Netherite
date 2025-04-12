@@ -1,11 +1,14 @@
 package dev.redstudio.netherite;
 
-import dev.redstudio.netherite.item.ModContent;
 import dev.redstudio.netherite.entity.SitEntity;
-import dev.redstudio.netherite.item.TileEntityModelInfo;
 import dev.redstudio.netherite.entity.SitEntityRenderer;
+import dev.redstudio.netherite.item.ModContent;
+import dev.redstudio.netherite.item.ModContentClient;
+import dev.redstudio.netherite.item.ModContentServer;
+import dev.redstudio.netherite.item.TileEntityModelInfo;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,14 +40,13 @@ public class Netherite
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModContent.BLOCKS.register(eventBus);
-        ModContent.TILE_ENTITY_TYPES.register(eventBus);
-        ModContent.ITEMS.register(eventBus);
+        ModContent.TILE_ENTITIES.register(eventBus);
+        ModContentServer.BLOCKS.register(eventBus);
+        ModContentServer.ITEMS.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
@@ -67,18 +69,20 @@ public class Netherite
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            ModContentClient.clientSetup(event);
             // Register general entity rendering handlers
-            RenderingRegistry.registerEntityRenderingHandler(RegistryEvents.SIT_ENTITY, SitEntityRenderer::new);
+            RenderingRegistry.registerEntityRenderingHandler(SIT_ENTITY, SitEntityRenderer::new);
 
-            // Loop through the TILE_ENTITY_MODEL_INFOS list to register tile entity renderers
-            for (TileEntityModelInfo tileEntityModelInfo : ModContent.TILE_ENTITY_MODEL_INFOS) {
-                TileEntityType<?> tileEntityType = tileEntityModelInfo.getTileEntityType().get();
+            // Loop through the TILE_ENTITY_MODEL_INFOS list from ModContentClient to register tile entity renderers
+            for (TileEntityModelInfo<?> tileEntityModelInfo : ModContentClient.TILE_ENTITY_MODEL_INFOS) {
+                @SuppressWarnings("unchecked")
+                TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) tileEntityModelInfo.type.get();
 
-                // Bind the tile entity renderer dynamically
-                ClientRegistry.bindTileEntityRenderer(tileEntityType, (dispatcher) ->
+                ClientRegistry.bindTileEntityRenderer(tileEntityType, dispatcher ->
                         new TileRenderer(dispatcher)
-                                .setTexture(tileEntityModelInfo.textureInfo) // Set texture from ModelTextureInfo
-                                .setModel(tileEntityModelInfo.modelInfo) // Create model dynamically
+                                .setTexture(tileEntityModelInfo.texture)
+                                .setModel(tileEntityModelInfo.model)
                 );
             }
         }

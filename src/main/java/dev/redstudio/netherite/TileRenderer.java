@@ -15,7 +15,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Vector3f;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class TileRenderer extends TileEntityRenderer<TileEntity> {
 
     private ResourceLocation texture = new ResourceLocation(Netherite.MOD_ID, "textures/block/barrier.png");

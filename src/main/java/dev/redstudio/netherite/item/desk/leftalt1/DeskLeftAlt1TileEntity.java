@@ -1,8 +1,8 @@
 package dev.redstudio.netherite.item.desk.leftalt1;
 
 
-
 import dev.redstudio.netherite.item.ModContent;
+
 import net.minecraft.tileentity.TileEntity;
 
 public class DeskLeftAlt1TileEntity extends TileEntity {

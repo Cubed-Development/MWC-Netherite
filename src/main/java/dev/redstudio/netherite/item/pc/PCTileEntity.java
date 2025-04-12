@@ -1,8 +1,8 @@
 package dev.redstudio.netherite.item.pc;
 
 
-
 import dev.redstudio.netherite.item.ModContent;
+
 import net.minecraft.tileentity.TileEntity;
 
 public class PCTileEntity extends TileEntity {

@@ -1,7 +1,6 @@
 package dev.redstudio.netherite.item.tv;
 
 
-
 import dev.redstudio.netherite.item.ModContent;
 import net.minecraft.tileentity.TileEntity;
 

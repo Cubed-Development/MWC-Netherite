@@ -1,9 +1,9 @@
 package dev.redstudio.netherite.item.chair.officechair2;
 
 
-import dev.redstudio.netherite.item.ModContent;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.tileentity.TileEntityType;import dev.redstudio.netherite.item.ModContent;
+
 
 public class OfficeChair2TileEntity extends TileEntity {
 
