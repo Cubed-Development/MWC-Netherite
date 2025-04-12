@@ -1,6 +1,6 @@
 package dev.redstudio.netherite.entity;
 
-import dev.redstudio.netherite.Netherite;
+import dev.redstudio.netherite.EventServer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.CompoundNBT;
@@ -15,7 +15,7 @@ public class SitEntity extends Entity {
     }
 
     public SitEntity(World world, BlockPos pos, double yLevel) {
-        this(Netherite.RegistryEvents.SIT_ENTITY, world); // Use armor stand or register your own entity type
+        this(EventServer.SIT_ENTITY, world); // Use armor stand or register your own entity type
         this.setPosition(pos.getX() + 0.5, pos.getY() + yLevel, pos.getZ() + 0.5);
     }
 

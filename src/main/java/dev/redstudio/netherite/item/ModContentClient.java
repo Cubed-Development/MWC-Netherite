@@ -65,7 +65,7 @@ public class ModContentClient {
             String textureInfo) {
         // Register tile entity model with the supplied model and texture information
         EntityModel<Entity> model = modelSupplier.get();
-        Netherite.LOGGER.info("Registering tile entity renderer with texture: " + textureInfo);
+        Netherite.LOGGER.info("Registering tile entity renderer with texture: {}", textureInfo);
         TILE_ENTITY_MODEL_INFOS.add(new TileEntityModelInfo<>(tileEntityType, model, textureInfo));
     }
 

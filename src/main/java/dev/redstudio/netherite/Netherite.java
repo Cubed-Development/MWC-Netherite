@@ -35,28 +35,5 @@ public class Netherite
         ModContent.TILE_ENTITIES.register(eventBus);
         ModContentServer.BLOCKS.register(eventBus);
         ModContentServer.ITEMS.register(eventBus);
-
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-
-        @ObjectHolder(MOD_ID + ":sit_entity")
-        public static final EntityType<SitEntity> SIT_ENTITY = null;
-
-        @SubscribeEvent
-        public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
-            event.getRegistry().register(
-                    EntityType.Builder.<SitEntity>create(SitEntity::new, EntityClassification.MISC)
-                            .size(0.0F, 0.0F) // Invisible entity (no collision box)
-                            .setShouldReceiveVelocityUpdates(false)
-                            .setTrackingRange(10)
-                            .setUpdateInterval(1)
-                            .build(new ResourceLocation(MOD_ID, "sit_entity").toString())
-                            .setRegistryName(new ResourceLocation(MOD_ID, "sit_entity"))
-            );
-        }
     }
 }
