@@ -1,26 +1,18 @@
 package dev.redstudio.netherite;
 
 import dev.redstudio.netherite.entity.SitEntity;
-import dev.redstudio.netherite.entity.SitEntityRenderer;
 import dev.redstudio.netherite.item.ModContent;
-import dev.redstudio.netherite.item.ModContentClient;
 import dev.redstudio.netherite.item.ModContentServer;
-import dev.redstudio.netherite.item.TileEntityModelInfo;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ObjectHolder;
 import org.apache.logging.log4j.LogManager;
@@ -65,26 +57,6 @@ public class Netherite
                             .build(new ResourceLocation(MOD_ID, "sit_entity").toString())
                             .setRegistryName(new ResourceLocation(MOD_ID, "sit_entity"))
             );
-        }
-
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-            ModContentClient.clientSetup(event);
-            // Register general entity rendering handlers
-            RenderingRegistry.registerEntityRenderingHandler(SIT_ENTITY, SitEntityRenderer::new);
-
-            // Loop through the TILE_ENTITY_MODEL_INFOS list from ModContentClient to register tile entity renderers
-            for (TileEntityModelInfo<?> tileEntityModelInfo : ModContentClient.TILE_ENTITY_MODEL_INFOS) {
-                @SuppressWarnings("unchecked")
-                TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) tileEntityModelInfo.type.get();
-
-                ClientRegistry.bindTileEntityRenderer(tileEntityType, dispatcher ->
-                        new TileRenderer(dispatcher)
-                                .setTexture(tileEntityModelInfo.texture)
-                                .setModel(tileEntityModelInfo.model)
-                );
-            }
         }
     }
 }
