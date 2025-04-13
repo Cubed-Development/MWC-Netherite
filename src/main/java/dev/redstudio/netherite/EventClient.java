@@ -21,21 +21,19 @@ public class EventClient {
     public static void onClientSetup(FMLClientSetupEvent event) {
         ModContentClient.clientSetup(event);
 
-        // Register general entity rendering handlers
         RenderingRegistry.registerEntityRenderingHandler(SIT_ENTITY, SitEntityRenderer::new);
 
-        // Loop through the TILE_ENTITY_MODEL_INFOS list from ModContentClient to register tile entity renderers
-        for (TileEntityModelInfo<?> tileEntityModelInfo : ModContentClient.TILE_ENTITY_MODEL_INFOS) {
+        // Only register one TileRenderer, but register all model info
+        for (TileEntityModelInfo<?> info : ModContentClient.TILE_ENTITY_MODEL_INFOS) {
+            TileRenderer.registerModelInfo(info);
+
             @SuppressWarnings("unchecked")
-            TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) tileEntityModelInfo.type.get();
+            TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) info.type.get();
 
-            Netherite.LOGGER.debug("Loading: {}", tileEntityType.getRegistryName());
+            Netherite.LOGGER.debug("Binding shared renderer for: {}", tileEntityType.getRegistryName());
 
-            ClientRegistry.bindTileEntityRenderer(tileEntityType, dispatcher ->
-                    new TileRenderer(dispatcher)
-                            .setTexture(tileEntityModelInfo.texture)
-                            .setModel(tileEntityModelInfo.model)
-            );
+            ClientRegistry.bindTileEntityRenderer(tileEntityType, TileRenderer::new);
         }
     }
+
 }
