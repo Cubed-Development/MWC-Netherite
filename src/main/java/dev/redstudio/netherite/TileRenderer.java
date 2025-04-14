@@ -6,10 +6,9 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.entity.Entity;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -42,15 +41,12 @@ public class TileRenderer extends TileEntityRenderer<TileEntity> {
         TileEntityModelInfo<?> info = MODEL_INFO_MAP.get(tileEntity.getType());
         if (info == null) return; // No model info registered
 
-        mc.getProfiler().startSection("mwcRender_" + tileEntity.getType().getRegistryName().getPath());
-
-        EntityModel<Entity> model = info.model;
-
         matrixStack.push();
-        matrixStack.translate(0.5D, 1.5D, 0.5D);
-        matrixStack.scale(1.0F, -1.0F, -1.0F);
 
         if (tileEntity.hasWorld()) {
+            matrixStack.translate(0.5D, 1.5D, 0.5D);
+            matrixStack.scale(1.0F, -1.0F, -1.0F);
+
             BlockState state = tileEntity.getWorld().getBlockState(tileEntity.getPos());
             if (state.hasProperty(BlockStateProperties.FACING)) {
                 Direction facing = state.get(BlockStateProperties.FACING);
@@ -65,11 +61,10 @@ public class TileRenderer extends TileEntityRenderer<TileEntity> {
             }
         }
 
-        mc.getProfiler().startSection("render");
+        mc.getProfiler().startSection("mwcRender");
         IVertexBuilder builder = bufferIn.getBuffer(info.renderType);
-        model.render(matrixStack, builder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
+        info.model.render(matrixStack, builder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
         matrixStack.pop();
-        mc.getProfiler().endSection();
         mc.getProfiler().endSection();
     }
 }
