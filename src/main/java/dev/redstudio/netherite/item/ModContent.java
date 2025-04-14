@@ -14,6 +14,7 @@ import dev.redstudio.netherite.item.desk.middle.DeskMiddleTileEntity;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerTileEntity;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1TileEntity;
 import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
+import dev.redstudio.netherite.item.rebar.RebarTileEntity;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckTileEntity;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
 import dev.redstudio.netherite.item.tv.TVTileEntity;
@@ -44,5 +45,6 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<LaptopTileEntity>> LAPTOP_TILE_ENTITY = TILE_ENTITIES.register("laptop_tile_entity", () -> TileEntityType.Builder.create(() -> new LaptopTileEntity(), ModContentServer.LAPTOP_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<CautionTileEntity>> CAUTION_TILE_ENTITY = TILE_ENTITIES.register("caution_tile_entity", () -> TileEntityType.Builder.create(() -> new CautionTileEntity(), ModContentServer.CAUTION_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<SwatTruckTileEntity>> SWAT_TRUCK_TILE_ENTITY = TILE_ENTITIES.register("swat_truck_tile_entity", () -> TileEntityType.Builder.create(() -> new SwatTruckTileEntity(), ModContentServer.SWAT_TRUCK_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<RebarTileEntity>> REBAR_TILE_ENTITY = TILE_ENTITIES.register("rebar_tile_entity", () -> TileEntityType.Builder.create(() -> new RebarTileEntity(), ModContentServer.REBAR_BLOCK.get()).build(null));
 
 }
