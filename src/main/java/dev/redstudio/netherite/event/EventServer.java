@@ -1,4 +1,4 @@
-package dev.redstudio.netherite;
+package dev.redstudio.netherite.event;
 
 import dev.redstudio.netherite.entity.SitEntity;
 import net.minecraft.entity.EntityClassification;

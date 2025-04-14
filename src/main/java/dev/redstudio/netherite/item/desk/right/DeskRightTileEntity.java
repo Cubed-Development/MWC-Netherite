@@ -2,7 +2,7 @@ package dev.redstudio.netherite.item.desk.right;
 
 
 import net.minecraft.tileentity.TileEntity;
-import dev.redstudio.netherite.item.ModContent;
+import dev.redstudio.netherite.content.ModContent;
 
 public class DeskRightTileEntity extends TileEntity {
 

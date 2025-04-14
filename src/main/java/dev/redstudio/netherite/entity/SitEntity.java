@@ -1,6 +1,6 @@
 package dev.redstudio.netherite.entity;
 
-import dev.redstudio.netherite.EventServer;
+import dev.redstudio.netherite.event.EventServer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.CompoundNBT;

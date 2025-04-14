@@ -1,6 +1,7 @@
-package dev.redstudio.netherite.item;
+package dev.redstudio.netherite.content;
 
 import dev.redstudio.netherite.Netherite;
+import dev.redstudio.netherite.item.TileEntityModelInfo;
 import dev.redstudio.netherite.item.barrier.BarrierModel;
 import dev.redstudio.netherite.item.caution_sign.CautionSignModel;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
@@ -15,7 +16,6 @@ import dev.redstudio.netherite.item.desk.right.DeskRightModel;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
 import dev.redstudio.netherite.item.pc.PCModel;
-import dev.redstudio.netherite.item.rebar.RebarModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.TVModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
@@ -55,7 +55,6 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.LAPTOP_TILE_ENTITY, LaptopModel::new, "textures/block/pc.png");
         registerTileEntityModel(ModContent.CAUTION_TILE_ENTITY, CautionSignModel::new, "textures/block/cautionsign.png");
         registerTileEntityModel(ModContent.SWAT_TRUCK_TILE_ENTITY, SwatTruckModel::new, "textures/block/swattruck.png");
-        registerTileEntityModel(ModContent.REBAR_TILE_ENTITY, RebarModel::new, "textures/block/rebar.png");
     }
 
 

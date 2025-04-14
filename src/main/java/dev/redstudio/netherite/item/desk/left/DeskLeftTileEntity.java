@@ -1,6 +1,6 @@
 package dev.redstudio.netherite.item.desk.left;
 
-import dev.redstudio.netherite.item.ModContent;
+import dev.redstudio.netherite.content.ModContent;
 
 import net.minecraft.tileentity.TileEntity;
 

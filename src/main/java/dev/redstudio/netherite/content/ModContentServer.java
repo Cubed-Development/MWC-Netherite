@@ -1,4 +1,4 @@
-package dev.redstudio.netherite.item;
+package dev.redstudio.netherite.content;
 
 import dev.redstudio.netherite.Netherite;
 import dev.redstudio.netherite.item.barrier.BarrierBlock;
@@ -15,7 +15,6 @@ import dev.redstudio.netherite.item.desk.right.DeskRightBlock;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Block;
 import dev.redstudio.netherite.item.laptop.LaptopBlock;
 import dev.redstudio.netherite.item.pc.PCBlock;
-import dev.redstudio.netherite.item.rebar.RebarBlock;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
 import dev.redstudio.netherite.item.tv.TVBlock;
 import net.minecraft.block.Block;
@@ -23,7 +22,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -53,7 +51,6 @@ public class ModContentServer {
     public static final RegistryObject<Block> LAPTOP_BLOCK = registerBlockWithItem("laptop_block", LaptopBlock::new);
     public static final RegistryObject<Block> CAUTION_BLOCK = registerBlockWithItem("caution_sign_block", CautionBlock::new);
     public static final RegistryObject<Block> SWAT_TRUCK_BLOCK = registerBlockWithItem("swat_truck_block", SwatTruckBlock::new);
-    public static final RegistryObject<Block> REBAR_BLOCK = registerBlockWithItem("rebar_block", RebarBlock::new);
 
 
 

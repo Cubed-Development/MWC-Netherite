@@ -1,7 +1,9 @@
-package dev.redstudio.netherite;
+package dev.redstudio.netherite.event;
 
+import dev.redstudio.netherite.Netherite;
+import dev.redstudio.netherite.TileRenderer;
 import dev.redstudio.netherite.entity.SitEntityRenderer;
-import dev.redstudio.netherite.item.ModContentClient;
+import dev.redstudio.netherite.content.ModContentClient;
 import dev.redstudio.netherite.item.TileEntityModelInfo;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -12,7 +14,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-import static dev.redstudio.netherite.EventServer.SIT_ENTITY;
+import static dev.redstudio.netherite.event.EventServer.SIT_ENTITY;
 
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EventClient {

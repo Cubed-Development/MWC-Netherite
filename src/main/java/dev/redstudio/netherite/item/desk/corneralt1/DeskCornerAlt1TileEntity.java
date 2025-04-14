@@ -1,6 +1,6 @@
 package dev.redstudio.netherite.item.desk.corneralt1;
 
-import dev.redstudio.netherite.item.ModContent;
+import dev.redstudio.netherite.content.ModContent;
 
 import net.minecraft.tileentity.TileEntity;
 
