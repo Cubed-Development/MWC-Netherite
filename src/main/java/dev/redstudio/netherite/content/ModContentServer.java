@@ -15,6 +15,7 @@ import dev.redstudio.netherite.item.desk.right.DeskRightBlock;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Block;
 import dev.redstudio.netherite.item.laptop.LaptopBlock;
 import dev.redstudio.netherite.item.pc.PCBlock;
+import dev.redstudio.netherite.item.sandbag.basic.SandbagBlock;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
 import dev.redstudio.netherite.item.tv.TVBlock;
 import net.minecraft.block.Block;
@@ -51,6 +52,7 @@ public class ModContentServer {
     public static final RegistryObject<Block> LAPTOP_BLOCK = registerBlockWithItem("laptop_block", LaptopBlock::new);
     public static final RegistryObject<Block> CAUTION_BLOCK = registerBlockWithItem("caution_sign_block", CautionBlock::new);
     public static final RegistryObject<Block> SWAT_TRUCK_BLOCK = registerBlockWithItem("swat_truck_block", SwatTruckBlock::new);
+    public static final RegistryObject<Block> SANDBAG_BLOCK = registerBlockWithItem("sandbag", SandbagBlock::new);
 
 
 

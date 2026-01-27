@@ -16,6 +16,7 @@ import dev.redstudio.netherite.item.desk.right.DeskRightModel;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
 import dev.redstudio.netherite.item.pc.PCModel;
+import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.TVModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
@@ -55,6 +56,7 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.LAPTOP_TILE_ENTITY, LaptopModel::new, "textures/block/pc.png");
         registerTileEntityModel(ModContent.CAUTION_TILE_ENTITY, CautionSignModel::new, "textures/block/cautionsign.png");
         registerTileEntityModel(ModContent.SWAT_TRUCK_TILE_ENTITY, SwatTruckModel::new, "textures/block/swattruck.png");
+        registerTileEntityModel(ModContent.SANDBAG_TILE_ENTITY, SandbagModel::new, "textures/block/sandbag.png");
     }
 
 
