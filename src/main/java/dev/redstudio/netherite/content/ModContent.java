@@ -7,6 +7,7 @@ import dev.redstudio.netherite.item.chair.homechair.HomeChairTileEntity;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1TileEntity;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2TileEntity;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorTileEntity;
+import dev.redstudio.netherite.item.containers.AmmunitionBoxTileEntity;
 import dev.redstudio.netherite.item.desk.left.DeskLeftTileEntity;
 import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1TileEntity;
 import dev.redstudio.netherite.item.desk.right.DeskRightTileEntity;
@@ -63,6 +64,8 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<CrossGravestone2TileEntity>> CROSS_GRAVESTONE_2_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_2_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestone2TileEntity(), ModContentServer.CROSS_GRAVESTONE_2_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<CrossGravestone3TileEntity>> CROSS_GRAVESTONE_3_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_3_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestone3TileEntity(), ModContentServer.CROSS_GRAVESTONE_3_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<GravestoneSkullTileEntity>> GRAVESTONE_SKULL_TILE_ENTITY = TILE_ENTITIES.register("gravestone_skull_tile_entity", () -> TileEntityType.Builder.create(() -> new GravestoneSkullTileEntity(), ModContentServer.GRAVESTONE_SKULL_BLOCK.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<AmmunitionBoxTileEntity>> AMMUNITION_BOX_TILE_ENTITY = TILE_ENTITIES.register("ammunition_box", () -> TileEntityType.Builder.create(() -> new AmmunitionBoxTileEntity(), ModContentServer.AMMUNITION_BOX_BLOCK.get()).build(null));
 
 
 }

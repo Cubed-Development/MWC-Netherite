@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.containers;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,7 +13,7 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class AmmunitionBox extends EntityModel<Entity> {
+public final class AmmunitionBoxModel extends EntityModel<Entity> {
 
     private final ModelRenderer ammobox;
     private final ModelRenderer Shape;
@@ -23,13 +23,13 @@ public final class AmmunitionBox extends EntityModel<Entity> {
     private final ModelRenderer handle;
     private final ModelRenderer text;
 
-    public AmmunitionBox() {
+    public AmmunitionBoxModel() {
         textureWidth = 512;
         textureHeight = 512;
 
         ammobox = new ModelRenderer(this);
         ammobox.setTextureSize(512, 512);
-        ammobox.setRotationPoint(0.0F, 24.0F, 0.0F);
+        ammobox.setRotationPoint(0.0F, 51.0F, 0.0F);
 
         Shape = new ModelRenderer(this);
         Shape.setTextureSize(512, 512);
@@ -108,9 +108,16 @@ public final class AmmunitionBox extends EntityModel<Entity> {
     }
 
     @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight,
-                       int packedOverlay, float red, float green, float blue, float alpha) {
+    public void render(MatrixStack matrixStack, IVertexBuilder buffer,
+                       int packedLight, int packedOverlay,
+                       float red, float green, float blue, float alpha) {
+
+        matrixStack.push();
+        matrixStack.scale(0.5F, 0.5F, 0.5F);
+
         ammobox.render(matrixStack, buffer, packedLight, packedOverlay);
+
+        matrixStack.pop();
     }
 
     private void setRotation(ModelRenderer model, float x, float y, float z) {

@@ -7,6 +7,7 @@ import dev.redstudio.netherite.item.chair.homechair.HomeChairBlock;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Block;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Block;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorBlock;
+import dev.redstudio.netherite.item.containers.AmmunitionBoxBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
 import dev.redstudio.netherite.item.desk.left.DeskLeftBlock;
@@ -73,6 +74,8 @@ public class ModContentServer {
     public static final RegistryObject<Block> CROSS_GRAVESTONE_2_BLOCK = registerBlockWithItem("gravestone_cross_2", CrossGravestone2Block::new);
     public static final RegistryObject<Block> CROSS_GRAVESTONE_3_BLOCK = registerBlockWithItem("gravestone_cross_3", CrossGravestone3Block::new);
     public static final RegistryObject<Block> GRAVESTONE_SKULL_BLOCK = registerBlockWithItem("gravestone_skull", GravestoneSkullBlock::new);
+
+    public static final RegistryObject<Block> AMMUNITION_BOX_BLOCK = registerBlockWithItem("ammunition_box", AmmunitionBoxBlock::new);
 
 
 

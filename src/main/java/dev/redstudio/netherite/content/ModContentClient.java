@@ -8,6 +8,7 @@ import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
+import dev.redstudio.netherite.item.containers.AmmunitionBoxModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
 import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
@@ -75,6 +76,7 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.CROSS_GRAVESTONE_3_TILE_ENTITY, CrossGravestone3Model::new, "textures/block/crossgravestone3.png");
         registerTileEntityModel(ModContent.GRAVESTONE_SKULL_TILE_ENTITY, GravestoneSkullModel::new, "textures/block/gravestoneskull.png");
 
+        registerTileEntityModel(ModContent.AMMUNITION_BOX_TILE_ENTITY, AmmunitionBoxModel::new, "textures/block/ammobox.png");
     }
 
 
