@@ -6,6 +6,7 @@ import dev.redstudio.netherite.item.caution_sign.CautionBlock;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairBlock;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Block;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Block;
+import dev.redstudio.netherite.item.chair.outdoor.OutdoorBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
 import dev.redstudio.netherite.item.desk.left.DeskLeftBlock;
@@ -16,6 +17,7 @@ import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Block;
 import dev.redstudio.netherite.item.laptop.LaptopBlock;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagBlock;
+import dev.redstudio.netherite.item.sandbag.wall.SandbagWallBlock;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
 import dev.redstudio.netherite.item.tv.TVBlock;
 import net.minecraft.block.Block;
@@ -42,6 +44,7 @@ public class ModContentServer {
     public static final RegistryObject<Block> HOME_CHAIR_BLOCK = registerBlockWithItem("home_chair_block", HomeChairBlock::new);
     public static final RegistryObject<Block> OFFICE_CHAIR_1_BLOCK = registerBlockWithItem("office_chair1_block", OfficeChair1Block::new);
     public static final RegistryObject<Block> OFFICE_CHAIR_2_BLOCK = registerBlockWithItem("office_chair2_block", OfficeChair2Block::new);
+    public static final RegistryObject<Block> OUTDOOR_CHAIR = registerBlockWithItem("outdoor_chair", OutdoorBlock::new);
     public static final RegistryObject<Block> DESK_LEFT = registerBlockWithItem("desk_left_block", DeskLeftBlock::new);
     public static final RegistryObject<Block> DESK_LEFTALT1 = registerBlockWithItem("desk_leftalt1_block", DeskLeftAlt1Block::new);
     public static final RegistryObject<Block> DESK_RIGHT = registerBlockWithItem("desk_right_block", DeskRightBlock::new);
@@ -53,6 +56,8 @@ public class ModContentServer {
     public static final RegistryObject<Block> CAUTION_BLOCK = registerBlockWithItem("caution_sign_block", CautionBlock::new);
     public static final RegistryObject<Block> SWAT_TRUCK_BLOCK = registerBlockWithItem("swat_truck_block", SwatTruckBlock::new);
     public static final RegistryObject<Block> SANDBAG_BLOCK = registerBlockWithItem("sandbag", SandbagBlock::new);
+    public static final RegistryObject<Block> SANDBAG_WALL_BLOCK = registerBlockWithItem("sandbag_wall", SandbagWallBlock::new);
+
 
 
 

@@ -7,6 +7,7 @@ import dev.redstudio.netherite.item.caution_sign.CautionSignModel;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
+import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
 import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
@@ -17,6 +18,7 @@ import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
+import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.TVModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
@@ -46,6 +48,7 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.HOME_CHAIR_TILE_ENTITY, HomeChairModel::new, "textures/block/homechair.png");
         registerTileEntityModel(ModContent.OFFICE_CHAIR_1_TILE_ENTITY, OfficeChair1Model::new, "textures/block/officechair.png");
         registerTileEntityModel(ModContent.OFFICE_CHAIR_2_TILE_ENTITY, OfficeChair2Model::new, "textures/block/officechair.png");
+        registerTileEntityModel(ModContent.OUTDOOR_CHAIR_TILE_ENTITY, OutdoorChairModel::new, "textures/block/outdoorchair.png");
         registerTileEntityModel(ModContent.DESK_LEFT_TILE_ENTITY, DeskLeftModel::new, "textures/block/desk.png");
         registerTileEntityModel(ModContent.DESK_LEFTALT1_TILE_ENTITY, DeskLeftAlt1Model::new, "textures/block/desk.png");
         registerTileEntityModel(ModContent.DESK_RIGHT_TILE_ENTITY, DeskRightModel::new, "textures/block/desk.png");
@@ -57,6 +60,8 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.CAUTION_TILE_ENTITY, CautionSignModel::new, "textures/block/cautionsign.png");
         registerTileEntityModel(ModContent.SWAT_TRUCK_TILE_ENTITY, SwatTruckModel::new, "textures/block/swattruck.png");
         registerTileEntityModel(ModContent.SANDBAG_TILE_ENTITY, SandbagModel::new, "textures/block/sandbag.png");
+        registerTileEntityModel(ModContent.SANDBAG_WALL_TILE_ENTITY, SandbagWallModel::new, "textures/block/sandbag.png");
+
     }
 
 

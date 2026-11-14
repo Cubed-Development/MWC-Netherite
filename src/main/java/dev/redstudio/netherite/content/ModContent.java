@@ -6,6 +6,7 @@ import dev.redstudio.netherite.item.caution_sign.CautionTileEntity;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairTileEntity;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1TileEntity;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2TileEntity;
+import dev.redstudio.netherite.item.chair.outdoor.OutdoorTileEntity;
 import dev.redstudio.netherite.item.desk.left.DeskLeftTileEntity;
 import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1TileEntity;
 import dev.redstudio.netherite.item.desk.right.DeskRightTileEntity;
@@ -15,6 +16,7 @@ import dev.redstudio.netherite.item.desk.corner.DeskCornerTileEntity;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1TileEntity;
 import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagTileEntity;
+import dev.redstudio.netherite.item.sandbag.wall.SandbagWallTileEntity;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckTileEntity;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
 import dev.redstudio.netherite.item.tv.TVTileEntity;
@@ -35,6 +37,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<HomeChairTileEntity>> HOME_CHAIR_TILE_ENTITY = TILE_ENTITIES.register("home_chair_tile_entity", () -> TileEntityType.Builder.create(() -> new HomeChairTileEntity(), ModContentServer.HOME_CHAIR_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<OfficeChair1TileEntity>> OFFICE_CHAIR_1_TILE_ENTITY = TILE_ENTITIES.register("office_chair_1_tile_entity", () -> TileEntityType.Builder.create(() -> new OfficeChair1TileEntity(), ModContentServer.OFFICE_CHAIR_1_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<OfficeChair2TileEntity>> OFFICE_CHAIR_2_TILE_ENTITY = TILE_ENTITIES.register("office_chair_2_tile_entity", () -> TileEntityType.Builder.create(() -> new OfficeChair2TileEntity(), ModContentServer.OFFICE_CHAIR_2_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<OutdoorTileEntity>> OUTDOOR_CHAIR_TILE_ENTITY = TILE_ENTITIES.register("outdoor_chair_tile_entity", () -> TileEntityType.Builder.create(() -> new OutdoorTileEntity(), ModContentServer.OUTDOOR_CHAIR.get()).build(null));
     public static final RegistryObject<TileEntityType<DeskLeftTileEntity>> DESK_LEFT_TILE_ENTITY = TILE_ENTITIES.register("desk_left_tile_entity", () -> TileEntityType.Builder.create(() -> new DeskLeftTileEntity(), ModContentServer.DESK_LEFT.get()).build(null));
     public static final RegistryObject<TileEntityType<DeskLeftAlt1TileEntity>> DESK_LEFTALT1_TILE_ENTITY = TILE_ENTITIES.register("desk_leftalt1_tile_entity", () -> TileEntityType.Builder.create(() -> new DeskLeftAlt1TileEntity(), ModContentServer.DESK_LEFTALT1.get()).build(null));
     public static final RegistryObject<TileEntityType<DeskRightTileEntity>> DESK_RIGHT_TILE_ENTITY = TILE_ENTITIES.register("desk_right_tile_entity", () -> TileEntityType.Builder.create(() -> new DeskRightTileEntity(), ModContentServer.DESK_RIGHT.get()).build(null));
@@ -46,6 +49,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<CautionTileEntity>> CAUTION_TILE_ENTITY = TILE_ENTITIES.register("caution_tile_entity", () -> TileEntityType.Builder.create(() -> new CautionTileEntity(), ModContentServer.CAUTION_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<SwatTruckTileEntity>> SWAT_TRUCK_TILE_ENTITY = TILE_ENTITIES.register("swat_truck_tile_entity", () -> TileEntityType.Builder.create(() -> new SwatTruckTileEntity(), ModContentServer.SWAT_TRUCK_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<SandbagTileEntity>> SANDBAG_TILE_ENTITY = TILE_ENTITIES.register("sandbag_tile_entity", () -> TileEntityType.Builder.create(() -> new SandbagTileEntity(), ModContentServer.SANDBAG_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<SandbagWallTileEntity>> SANDBAG_WALL_TILE_ENTITY = TILE_ENTITIES.register("sandbag_wall_tile_entity", () -> TileEntityType.Builder.create(() -> new SandbagWallTileEntity(), ModContentServer.SANDBAG_WALL_BLOCK.get()).build(null));
 
 
 }
