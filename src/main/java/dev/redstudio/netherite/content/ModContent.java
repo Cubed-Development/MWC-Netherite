@@ -24,7 +24,8 @@ import dev.redstudio.netherite.item.sandbag.basic.SandbagTileEntity;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallTileEntity;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckTileEntity;
 import dev.redstudio.netherite.item.pc.PCTileEntity;
-import dev.redstudio.netherite.item.tv.TVTileEntity;
+import dev.redstudio.netherite.item.tv.ceiling.TVCeilingTileEntity;
+import dev.redstudio.netherite.item.tv.tv.TVTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,6 +38,7 @@ public class ModContent {
 
     // Define RegistryObject<TileEntityType> for each TileEntity
     public static final RegistryObject<TileEntityType<TVTileEntity>> TV_TILE_ENTITY = TILE_ENTITIES.register("tv_tile_entity", () -> TileEntityType.Builder.create(() -> new TVTileEntity(), ModContentServer.TV_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<TVCeilingTileEntity>> TV_CEILING_TILE_ENTITY = TILE_ENTITIES.register("tv_ceiling_tile_entity", () -> TileEntityType.Builder.create(() -> new TVCeilingTileEntity(), ModContentServer.TV_CEILING_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<PCTileEntity>> PC_TILE_ENTITY = TILE_ENTITIES.register("pc_tile_entity", () -> TileEntityType.Builder.create(() -> new PCTileEntity(), ModContentServer.PC_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<BarrierTileEntity>> BARRIER_TILE_ENTITY = TILE_ENTITIES.register("barrier_tile_entity", () -> TileEntityType.Builder.create(() -> new BarrierTileEntity(), ModContentServer.BARRIER_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<HomeChairTileEntity>> HOME_CHAIR_TILE_ENTITY = TILE_ENTITIES.register("home_chair_tile_entity", () -> TileEntityType.Builder.create(() -> new HomeChairTileEntity(), ModContentServer.HOME_CHAIR_BLOCK.get()).build(null));

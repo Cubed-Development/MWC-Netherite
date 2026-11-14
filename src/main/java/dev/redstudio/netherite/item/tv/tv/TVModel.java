@@ -1,4 +1,4 @@
-package dev.redstudio.netherite.item.tv;
+package dev.redstudio.netherite.item.tv.tv;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

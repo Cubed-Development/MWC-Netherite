@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.electronics;
+package dev.redstudio.netherite.item.tv.ceiling;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,14 +8,14 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class TVCeiling extends EntityModel<Entity> {
+public final class TVCeilingModel extends EntityModel<Entity> {
 
     private final ModelRenderer tv;
     private final ModelRenderer tv8_r1;
     private final ModelRenderer tv6_r1;
     private final ModelRenderer tv5_r1;
 
-    public TVCeiling() {
+    public TVCeilingModel() {
         textureWidth = 256;
         textureHeight = 256;
 

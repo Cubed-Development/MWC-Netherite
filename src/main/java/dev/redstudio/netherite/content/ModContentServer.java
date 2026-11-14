@@ -24,12 +24,16 @@ import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagBlock;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallBlock;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
-import dev.redstudio.netherite.item.tv.TVBlock;
+import dev.redstudio.netherite.item.tv.ceiling.TVCeilingBlock;
+import dev.redstudio.netherite.item.tv.tv.TVBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityType;
+
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,6 +48,7 @@ public class ModContentServer {
 
     // Blocks with Items
     public static final RegistryObject<Block> TV_BLOCK = registerBlockWithItem("tv_block", TVBlock::new);
+    public static final RegistryObject<Block> TV_CEILING_BLOCK = registerBlockWithItem("tv_ceiling_block", TVCeilingBlock::new);
     public static final RegistryObject<Block> PC_BLOCK = registerBlockWithItem("pc_block", PCBlock::new);
     public static final RegistryObject<Block> BARRIER_BLOCK = registerBlockWithItem("barrier_block", BarrierBlock::new);
     public static final RegistryObject<Block> HOME_CHAIR_BLOCK = registerBlockWithItem("home_chair_block", HomeChairBlock::new);

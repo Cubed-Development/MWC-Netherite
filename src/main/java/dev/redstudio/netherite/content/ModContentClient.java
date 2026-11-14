@@ -19,14 +19,14 @@ import dev.redstudio.netherite.item.gravestone.GravestoneModel;
 import dev.redstudio.netherite.item.gravestone.cross.CrossGravestoneModel;
 import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Model;
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Model;
-import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullBlock;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullModel;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
-import dev.redstudio.netherite.item.tv.TVModel;
+import dev.redstudio.netherite.item.tv.ceiling.TVCeilingModel;
+import dev.redstudio.netherite.item.tv.tv.TVModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
@@ -49,6 +49,7 @@ public class ModContentClient {
     private static void registerTileEntityModels() {
         // Ensure all models extend EntityModel<Entity>
         registerTileEntityModel(ModContent.TV_TILE_ENTITY, TVModel::new, "textures/block/tv.png");
+        registerTileEntityModel(ModContent.TV_CEILING_TILE_ENTITY, TVCeilingModel::new, "textures/block/tv.png");
         registerTileEntityModel(ModContent.PC_TILE_ENTITY, PCModel::new, "textures/block/pc.png");
         registerTileEntityModel(ModContent.BARRIER_TILE_ENTITY, BarrierModel::new, "textures/block/barrier.png");
         registerTileEntityModel(ModContent.HOME_CHAIR_TILE_ENTITY, HomeChairModel::new, "textures/block/homechair.png");
@@ -86,6 +87,17 @@ public class ModContentClient {
         Netherite.LOGGER.info("Registering tile entity renderer with texture: {}", textureInfo);
         TILE_ENTITY_MODEL_INFOS.add(new TileEntityModelInfo<>(tileEntityType, model, textureInfo));
     }
+
+    public static TileEntityModelInfo<?> getTileEntityModelInfo(TileEntityType<?> type) {
+        for (TileEntityModelInfo<?> info : TILE_ENTITY_MODEL_INFOS) {
+            if (info.type.get() == type) {
+                return info;
+            }
+        }
+
+        return null;
+    }
+
 
 
 

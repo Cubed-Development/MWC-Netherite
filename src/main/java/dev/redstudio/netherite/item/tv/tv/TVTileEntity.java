@@ -1,4 +1,4 @@
-package dev.redstudio.netherite.item.tv;
+package dev.redstudio.netherite.item.tv.tv;
 
 
 import dev.redstudio.netherite.content.ModContent;
