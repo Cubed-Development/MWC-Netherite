@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.gravestones;
+package dev.redstudio.netherite.item.gravestone.cross3;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,13 +8,13 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class CrossGravestone3 extends EntityModel<Entity> {
+public final class CrossGravestone3Model extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
     private final ModelRenderer bone3;
     private final ModelRenderer bone4;
 
-    public CrossGravestone3() {
+    public CrossGravestone3Model() {
         textureWidth = 64;
         textureHeight = 64;
 

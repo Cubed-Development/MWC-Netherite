@@ -14,6 +14,11 @@ import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1Block;
 import dev.redstudio.netherite.item.desk.middle.DeskMiddleBlock;
 import dev.redstudio.netherite.item.desk.right.DeskRightBlock;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Block;
+import dev.redstudio.netherite.item.gravestone.GravestoneBlock;
+import dev.redstudio.netherite.item.gravestone.cross.CrossGravestoneBlock;
+import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Block;
+import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Block;
+import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullBlock;
 import dev.redstudio.netherite.item.laptop.LaptopBlock;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagBlock;
@@ -58,6 +63,11 @@ public class ModContentServer {
     public static final RegistryObject<Block> SANDBAG_BLOCK = registerBlockWithItem("sandbag", SandbagBlock::new);
     public static final RegistryObject<Block> SANDBAG_WALL_BLOCK = registerBlockWithItem("sandbag_wall", SandbagWallBlock::new);
 
+    public static final RegistryObject<Block> GRAVESTONE_BLOCK = registerBlockWithItem("gravestone", GravestoneBlock::new);
+    public static final RegistryObject<Block> CROSS_GRAVESTONE_BLOCK = registerBlockWithItem("gravestone_cross", CrossGravestoneBlock::new);
+    public static final RegistryObject<Block> CROSS_GRAVESTONE_2_BLOCK = registerBlockWithItem("gravestone_cross_2", CrossGravestone2Block::new);
+    public static final RegistryObject<Block> CROSS_GRAVESTONE_3_BLOCK = registerBlockWithItem("gravestone_cross_3", CrossGravestone3Block::new);
+    public static final RegistryObject<Block> GRAVESTONE_SKULL_BLOCK = registerBlockWithItem("gravestone_skull", GravestoneSkullBlock::new);
 
 
 

@@ -15,6 +15,12 @@ import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1Model;
 import dev.redstudio.netherite.item.desk.middle.DeskMiddleModel;
 import dev.redstudio.netherite.item.desk.right.DeskRightModel;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
+import dev.redstudio.netherite.item.gravestone.GravestoneModel;
+import dev.redstudio.netherite.item.gravestone.cross.CrossGravestoneModel;
+import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Model;
+import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Model;
+import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullBlock;
+import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullModel;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
@@ -61,6 +67,12 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.SWAT_TRUCK_TILE_ENTITY, SwatTruckModel::new, "textures/block/swattruck.png");
         registerTileEntityModel(ModContent.SANDBAG_TILE_ENTITY, SandbagModel::new, "textures/block/sandbag.png");
         registerTileEntityModel(ModContent.SANDBAG_WALL_TILE_ENTITY, SandbagWallModel::new, "textures/block/sandbag.png");
+
+        registerTileEntityModel(ModContent.GRAVESTONE_TILE_ENTITY, GravestoneModel::new, "textures/block/gravestone.png");
+        registerTileEntityModel(ModContent.CROSS_GRAVESTONE_TILE_ENTITY, CrossGravestoneModel::new, "textures/block/crossgravestone.png");
+        registerTileEntityModel(ModContent.CROSS_GRAVESTONE_2_TILE_ENTITY, CrossGravestone2Model::new, "textures/block/crossgravestone2.png");
+        registerTileEntityModel(ModContent.CROSS_GRAVESTONE_3_TILE_ENTITY, CrossGravestone3Model::new, "textures/block/crossgravestone3.png");
+        registerTileEntityModel(ModContent.GRAVESTONE_SKULL_TILE_ENTITY, GravestoneSkullModel::new, "textures/block/gravestoneskull.png");
 
     }
 

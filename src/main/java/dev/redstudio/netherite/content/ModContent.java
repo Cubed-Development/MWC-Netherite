@@ -14,6 +14,11 @@ import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1TileEntity;
 import dev.redstudio.netherite.item.desk.middle.DeskMiddleTileEntity;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerTileEntity;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1TileEntity;
+import dev.redstudio.netherite.item.gravestone.GravestoneTileEntity;
+import dev.redstudio.netherite.item.gravestone.cross.CrossGravestoneTileEntity;
+import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2TileEntity;
+import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3TileEntity;
+import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullTileEntity;
 import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagTileEntity;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallTileEntity;
@@ -50,6 +55,12 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<SwatTruckTileEntity>> SWAT_TRUCK_TILE_ENTITY = TILE_ENTITIES.register("swat_truck_tile_entity", () -> TileEntityType.Builder.create(() -> new SwatTruckTileEntity(), ModContentServer.SWAT_TRUCK_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<SandbagTileEntity>> SANDBAG_TILE_ENTITY = TILE_ENTITIES.register("sandbag_tile_entity", () -> TileEntityType.Builder.create(() -> new SandbagTileEntity(), ModContentServer.SANDBAG_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<SandbagWallTileEntity>> SANDBAG_WALL_TILE_ENTITY = TILE_ENTITIES.register("sandbag_wall_tile_entity", () -> TileEntityType.Builder.create(() -> new SandbagWallTileEntity(), ModContentServer.SANDBAG_WALL_BLOCK.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<GravestoneTileEntity>> GRAVESTONE_TILE_ENTITY = TILE_ENTITIES.register("gravestone_tile_entity", () -> TileEntityType.Builder.create(() -> new GravestoneTileEntity(), ModContentServer.GRAVESTONE_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<CrossGravestoneTileEntity>> CROSS_GRAVESTONE_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestoneTileEntity(), ModContentServer.CROSS_GRAVESTONE_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<CrossGravestone2TileEntity>> CROSS_GRAVESTONE_2_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_2_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestone2TileEntity(), ModContentServer.CROSS_GRAVESTONE_2_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<CrossGravestone3TileEntity>> CROSS_GRAVESTONE_3_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_3_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestone3TileEntity(), ModContentServer.CROSS_GRAVESTONE_3_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<GravestoneSkullTileEntity>> GRAVESTONE_SKULL_TILE_ENTITY = TILE_ENTITIES.register("gravestone_skull_tile_entity", () -> TileEntityType.Builder.create(() -> new GravestoneSkullTileEntity(), ModContentServer.GRAVESTONE_SKULL_BLOCK.get()).build(null));
 
 
 }

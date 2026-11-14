@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.gravestones;
+package dev.redstudio.netherite.item.gravestone.skull;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,14 +8,14 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class GravestoneSkull extends EntityModel<Entity> {
+public final class GravestoneSkullModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
     private final ModelRenderer bone2;
     private final ModelRenderer bone3;
     private final ModelRenderer bone4;
 
-    public GravestoneSkull() {
+    public GravestoneSkullModel() {
         textureWidth = 64;
         textureHeight = 64;
 
