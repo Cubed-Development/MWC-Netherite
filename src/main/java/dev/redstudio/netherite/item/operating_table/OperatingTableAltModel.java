@@ -11,7 +11,6 @@ import net.minecraft.entity.Entity;
 public final class OperatingTableAltModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
-    private final ModelRenderer table15_r1;
     private final ModelRenderer table14_r1;
     private final ModelRenderer table13_r1;
     private final ModelRenderer table12_r1;
@@ -34,12 +33,6 @@ public final class OperatingTableAltModel extends EntityModel<Entity> {
         bone.setTextureOffset(0, 30).addBox(-5.0F, 42.9382F, 1.0596F, 10, 2, 15, 0.0F);
         bone.setTextureOffset(0, 60).addBox(-3.5F, 30.9382F, 3.5596F, 7, 6, 7, 0.0F);
 
-        table15_r1 = new ModelRenderer(this);
-        table15_r1.setTextureSize(textureWidth, textureHeight);
-        table15_r1.mirror = true;
-        bone.addChild(table15_r1);
-        setRotation(table15_r1, -2.843F, 0.0F, 0.0F);
-        table15_r1.setTextureOffset(0, 0).addBox(-5.5F, -32.4F, -8.9F, 11, 2, 12, 0.0F);
 
         table14_r1 = new ModelRenderer(this);
         table14_r1.setTextureSize(textureWidth, textureHeight);

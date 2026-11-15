@@ -21,6 +21,7 @@ import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2TileEntity
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3TileEntity;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullTileEntity;
 import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
+import dev.redstudio.netherite.item.operating_table.OperatingTableAltTileEntity;
 import dev.redstudio.netherite.item.operating_table.OperatingTableTileEntity;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagTileEntity;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallTileEntity;
@@ -69,6 +70,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<AmmunitionBoxTileEntity>> AMMUNITION_BOX_TILE_ENTITY = TILE_ENTITIES.register("ammunition_box_tile_entity", () -> TileEntityType.Builder.create(() -> new AmmunitionBoxTileEntity(), ModContentServer.AMMUNITION_BOX_BLOCK.get()).build(null));
 
     public static final RegistryObject<TileEntityType<OperatingTableTileEntity>> OPERATING_TABLE_TILE_ENTITY = TILE_ENTITIES.register("operating_table_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableTileEntity(), ModContentServer.OPERATING_TABLE_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<OperatingTableAltTileEntity>> OPERATING_TABLE_ALT_TILE_ENTITY = TILE_ENTITIES.register("operating_table_alt_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableAltTileEntity(), ModContentServer.OPERATING_TABLE_ALT_BLOCK.get()).build(null));
 
 
 }
