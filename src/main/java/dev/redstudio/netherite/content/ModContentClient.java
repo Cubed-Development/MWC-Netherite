@@ -22,6 +22,7 @@ import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Model;
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Model;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullModel;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
+import dev.redstudio.netherite.item.operating_table.OperatingTableModel;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
@@ -77,6 +78,9 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.GRAVESTONE_SKULL_TILE_ENTITY, GravestoneSkullModel::new, "textures/block/gravestoneskull.png");
 
         registerTileEntityModel(ModContent.AMMUNITION_BOX_TILE_ENTITY, AmmunitionBoxModel::new, "textures/block/ammobox.png");
+
+        registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");
+
     }
 
 

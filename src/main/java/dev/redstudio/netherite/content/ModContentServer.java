@@ -21,6 +21,7 @@ import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Block;
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Block;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullBlock;
 import dev.redstudio.netherite.item.laptop.LaptopBlock;
+import dev.redstudio.netherite.item.operating_table.OperatingTableBlock;
 import dev.redstudio.netherite.item.pc.PCBlock;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagBlock;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallBlock;
@@ -76,6 +77,8 @@ public class ModContentServer {
     public static final RegistryObject<Block> GRAVESTONE_SKULL_BLOCK = registerBlockWithItem("gravestone_skull", GravestoneSkullBlock::new);
 
     public static final RegistryObject<Block> AMMUNITION_BOX_BLOCK = registerBlockWithItem("ammunition_box", AmmunitionBoxBlock::new);
+
+    public static final RegistryObject<Block> OPERATING_TABLE_BLOCK = registerBlockWithItem("operating_table", OperatingTableBlock::new);
 
 
 

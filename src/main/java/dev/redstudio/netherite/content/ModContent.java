@@ -21,6 +21,7 @@ import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2TileEntity
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3TileEntity;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullTileEntity;
 import dev.redstudio.netherite.item.laptop.LaptopTileEntity;
+import dev.redstudio.netherite.item.operating_table.OperatingTableTileEntity;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagTileEntity;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallTileEntity;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckTileEntity;
@@ -65,7 +66,9 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<CrossGravestone3TileEntity>> CROSS_GRAVESTONE_3_TILE_ENTITY = TILE_ENTITIES.register("cross_gravestone_3_tile_entity", () -> TileEntityType.Builder.create(() -> new CrossGravestone3TileEntity(), ModContentServer.CROSS_GRAVESTONE_3_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<GravestoneSkullTileEntity>> GRAVESTONE_SKULL_TILE_ENTITY = TILE_ENTITIES.register("gravestone_skull_tile_entity", () -> TileEntityType.Builder.create(() -> new GravestoneSkullTileEntity(), ModContentServer.GRAVESTONE_SKULL_BLOCK.get()).build(null));
 
-    public static final RegistryObject<TileEntityType<AmmunitionBoxTileEntity>> AMMUNITION_BOX_TILE_ENTITY = TILE_ENTITIES.register("ammunition_box", () -> TileEntityType.Builder.create(() -> new AmmunitionBoxTileEntity(), ModContentServer.AMMUNITION_BOX_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<AmmunitionBoxTileEntity>> AMMUNITION_BOX_TILE_ENTITY = TILE_ENTITIES.register("ammunition_box_tile_entity", () -> TileEntityType.Builder.create(() -> new AmmunitionBoxTileEntity(), ModContentServer.AMMUNITION_BOX_BLOCK.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<OperatingTableTileEntity>> OPERATING_TABLE_TILE_ENTITY = TILE_ENTITIES.register("operating_table_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableTileEntity(), ModContentServer.OPERATING_TABLE_BLOCK.get()).build(null));
 
 
 }

@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.operating_table;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class OperatingTable extends EntityModel<Entity> {
+public final class OperatingTableModel extends EntityModel<Entity> {
 
     private final ModelRenderer table;
     private final ModelRenderer table13_r1;
@@ -18,7 +18,7 @@ public final class OperatingTable extends EntityModel<Entity> {
     private final ModelRenderer table4_r1;
     private final ModelRenderer table3_r1;
 
-    public OperatingTable() {
+    public OperatingTableModel() {
         textureWidth = 256;
         textureHeight = 256;
 
