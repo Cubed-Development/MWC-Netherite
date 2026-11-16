@@ -1,4 +1,4 @@
-package dev.redstudio.netherite.item.containers;
+package dev.redstudio.netherite.item.containers.ammo_box;
 
 import dev.redstudio.netherite.item.BlockBase;
 import net.minecraft.block.BlockState;

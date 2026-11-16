@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.item.containers;
+package dev.redstudio.netherite.item.containers.ammo_box;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -24,8 +24,6 @@ public final class AmmunitionBoxModel extends EntityModel<Entity> {
     private final ModelRenderer text;
 
     public AmmunitionBoxModel() {
-        textureWidth = 512;
-        textureHeight = 512;
 
         ammobox = new ModelRenderer(this);
         ammobox.setTextureSize(512, 512);

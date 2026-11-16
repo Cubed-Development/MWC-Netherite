@@ -8,7 +8,8 @@ import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
-import dev.redstudio.netherite.item.containers.AmmunitionBoxModel;
+import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxModel;
+import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
 import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
@@ -79,6 +80,7 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.GRAVESTONE_SKULL_TILE_ENTITY, GravestoneSkullModel::new, "textures/block/gravestoneskull.png");
 
         registerTileEntityModel(ModContent.AMMUNITION_BOX_TILE_ENTITY, AmmunitionBoxModel::new, "textures/block/ammobox.png");
+        registerTileEntityModel(ModContent.WEAPON_CRATE_TILE_ENTITY, WeaponCrateRussianModel::new, "textures/block/militarycrate.png");
 
         registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");
         registerTileEntityModel(ModContent.OPERATING_TABLE_ALT_TILE_ENTITY, OperatingTableAltModel::new, "textures/block/operatingtable.png");

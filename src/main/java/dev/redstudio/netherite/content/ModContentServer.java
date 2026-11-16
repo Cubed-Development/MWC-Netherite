@@ -7,7 +7,8 @@ import dev.redstudio.netherite.item.chair.homechair.HomeChairBlock;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Block;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Block;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorBlock;
-import dev.redstudio.netherite.item.containers.AmmunitionBoxBlock;
+import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxBlock;
+import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
 import dev.redstudio.netherite.item.desk.left.DeskLeftBlock;
@@ -35,8 +36,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityType;
-
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -78,6 +77,7 @@ public class ModContentServer {
     public static final RegistryObject<Block> GRAVESTONE_SKULL_BLOCK = registerBlockWithItem("gravestone_skull", GravestoneSkullBlock::new);
 
     public static final RegistryObject<Block> AMMUNITION_BOX_BLOCK = registerBlockWithItem("ammunition_box", AmmunitionBoxBlock::new);
+    public static final RegistryObject<Block> WEAPON_CRATE_RUSSIAN_BLOCK = registerBlockWithItem("weapon_crate_russian", WeaponCrateRussianBlock::new);
 
     public static final RegistryObject<Block> OPERATING_TABLE_BLOCK = registerBlockWithItem("operating_table", OperatingTableBlock::new);
     public static final RegistryObject<Block> OPERATING_TABLE_ALT_BLOCK = registerBlockWithItem("operating_table_alt", OperatingTableAltBlock::new);
