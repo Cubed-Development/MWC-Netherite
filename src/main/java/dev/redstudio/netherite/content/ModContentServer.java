@@ -8,6 +8,8 @@ import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Block;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Block;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorBlock;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxBlock;
+import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedBlock;
+import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenBlock;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
@@ -78,6 +80,9 @@ public class ModContentServer {
 
     public static final RegistryObject<Block> AMMUNITION_BOX_BLOCK = registerBlockWithItem("ammunition_box", AmmunitionBoxBlock::new);
     public static final RegistryObject<Block> WEAPON_CRATE_RUSSIAN_BLOCK = registerBlockWithItem("weapon_crate_russian", WeaponCrateRussianBlock::new);
+    public static final RegistryObject<Block> FRIDGE_OPEN_BLOCK = registerBlockWithItem("fridge_open", FridgeOpenBlock::new);
+    public static final RegistryObject<Block> FRIDGE_CLOSED_BLOCK = registerBlockWithItem("fridge_closed", FridgeClosedBlock::new);
+
 
     public static final RegistryObject<Block> OPERATING_TABLE_BLOCK = registerBlockWithItem("operating_table", OperatingTableBlock::new);
     public static final RegistryObject<Block> OPERATING_TABLE_ALT_BLOCK = registerBlockWithItem("operating_table_alt", OperatingTableAltBlock::new);

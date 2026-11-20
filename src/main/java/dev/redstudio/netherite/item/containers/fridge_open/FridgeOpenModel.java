@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.containers.fridge_open;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,7 +13,7 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class FridgeOpen extends EntityModel<Entity> {
+public final class FridgeOpenModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
     private final ModelRenderer bone4_r1;
@@ -21,7 +21,7 @@ public final class FridgeOpen extends EntityModel<Entity> {
     private final ModelRenderer bone2_r1;
     private final ModelRenderer bone_r1;
 
-    public FridgeOpen() {
+    public FridgeOpenModel() {
         textureWidth = 128;
         textureHeight = 128;
 
