@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.electronics;
+package dev.redstudio.netherite.item.containers.vending_machine;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class VendingMachine extends EntityModel<Entity> {
+public final class VendingMachineModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone2;
     private final ModelRenderer bone4;
@@ -17,7 +17,7 @@ public final class VendingMachine extends EntityModel<Entity> {
     private final ModelRenderer bone2_r1;
     private final ModelRenderer bone_r1;
 
-    public VendingMachine() {
+    public VendingMachineModel() {
         textureWidth = 256;
         textureHeight = 256;
 

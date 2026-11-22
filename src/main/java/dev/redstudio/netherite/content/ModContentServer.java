@@ -13,6 +13,7 @@ import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpen
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedBlock;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenBlock;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianBlock;
+import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
 import dev.redstudio.netherite.item.desk.left.DeskLeftBlock;
@@ -87,6 +88,8 @@ public class ModContentServer {
 
     public static final RegistryObject<Block> ELECTRIC_BOX_CLOSED_BLOCK = registerBlockWithItem("electric_box_closed", ElectricBoxClosedBlock::new);
     public static final RegistryObject<Block> ELECTRIC_BOX_OPEN_BLOCK = registerBlockWithItem("electric_box_open", ElectricBoxOpenBlock::new);
+
+    public static final RegistryObject<Block> VENDING_MACHINE_BLOCK = registerBlockWithItem("vending_machine", VendingMachineBlock::new);
 
 
 

@@ -15,6 +15,7 @@ import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpen
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedModel;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenModel;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianModel;
+import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
 import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
@@ -92,6 +93,8 @@ public class ModContentClient {
 
         registerTileEntityModel(ModContent.ELECTRIC_BOX_CLOSED_TILE_ENTITY, ElectricBoxClosedModel::new, "textures/block/electricbox.png");
         registerTileEntityModel(ModContent.ELECTRIC_BOX_OPEN_TILE_ENTITY, ElectricBoxOpenModel::new, "textures/block/electricbox.png");
+
+        registerTileEntityModel(ModContent.VENDING_MACHINE_TILE_ENTITY, VendingMachineModel::new, "textures/block/vendingmachine.png");
 
 
         registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");
