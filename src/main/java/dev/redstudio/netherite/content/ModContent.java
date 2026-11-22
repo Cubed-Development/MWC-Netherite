@@ -10,6 +10,8 @@ import dev.redstudio.netherite.item.chair.outdoor.OutdoorTileEntity;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxTileEntity;
 import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedTileEntity;
 import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenTileEntity;
+import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabinetClosedTileEntity;
+import dev.redstudio.netherite.item.containers.filing_cabinet_open.FilingCabinetOpenedTileEntity;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenTileEntity;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateTileEntity;
 import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineTileEntity;
@@ -81,6 +83,8 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<ElectricBoxOpenTileEntity>> ELECTRIC_BOX_OPEN_TILE_ENTITY = TILE_ENTITIES.register("electric_box_open_tile_entity", () -> TileEntityType.Builder.create(() -> new ElectricBoxOpenTileEntity(), ModContentServer.ELECTRIC_BOX_OPEN_BLOCK.get()).build(null));
 
     public static final RegistryObject<TileEntityType<VendingMachineTileEntity>> VENDING_MACHINE_TILE_ENTITY = TILE_ENTITIES.register("vending_machine_tile_entity", () -> TileEntityType.Builder.create(() -> new VendingMachineTileEntity(), ModContentServer.VENDING_MACHINE_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<FilingCabinetOpenedTileEntity>> FILING_CABINET_OPENED_TILE_ENTITY = TILE_ENTITIES.register("filing_cabinet_opened_tile_entity", () -> TileEntityType.Builder.create(() -> new FilingCabinetOpenedTileEntity(), ModContentServer.FILING_CABINET_OPENED_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<FilingCabinetClosedTileEntity>> FILING_CABINET_CLOSED_TILE_ENTITY = TILE_ENTITIES.register("filing_cabinet_closed_tile_entity", () -> TileEntityType.Builder.create(() -> new FilingCabinetClosedTileEntity(), ModContentServer.FILING_CABINET_CLOSED_BLOCK.get()).build(null));
 
 
 
