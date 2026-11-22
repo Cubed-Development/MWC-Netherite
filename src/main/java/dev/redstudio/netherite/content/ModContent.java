@@ -8,6 +8,8 @@ import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1TileEntity;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2TileEntity;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorTileEntity;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxTileEntity;
+import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedTileEntity;
+import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenTileEntity;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenTileEntity;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateTileEntity;
 import dev.redstudio.netherite.item.desk.left.DeskLeftTileEntity;
@@ -73,6 +75,10 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<WeaponCrateTileEntity>> WEAPON_CRATE_TILE_ENTITY = TILE_ENTITIES.register("weapon_crate_russian_tile_entity", () -> TileEntityType.Builder.create(() -> new WeaponCrateTileEntity(), ModContentServer.WEAPON_CRATE_RUSSIAN_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<FridgeOpenTileEntity>> FRIDGE_OPEN_TILE_ENTITY = TILE_ENTITIES.register("fridge_open_tile_entity", () -> TileEntityType.Builder.create(() -> new FridgeOpenTileEntity(), ModContentServer.FRIDGE_OPEN_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<FridgeOpenTileEntity>> FRIDGE_CLOSED_TILE_ENTITY = TILE_ENTITIES.register("fridge_closed_tile_entity", () -> TileEntityType.Builder.create(() -> new FridgeOpenTileEntity(), ModContentServer.FRIDGE_CLOSED_BLOCK.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<ElectricBoxClosedTileEntity>> ELECTRIC_BOX_CLOSED_TILE_ENTITY = TILE_ENTITIES.register("electric_box_closed_tile_entity", () -> TileEntityType.Builder.create(() -> new ElectricBoxClosedTileEntity(), ModContentServer.ELECTRIC_BOX_CLOSED_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<ElectricBoxOpenTileEntity>> ELECTRIC_BOX_OPEN_TILE_ENTITY = TILE_ENTITIES.register("electric_box_open_tile_entity", () -> TileEntityType.Builder.create(() -> new ElectricBoxOpenTileEntity(), ModContentServer.ELECTRIC_BOX_OPEN_BLOCK.get()).build(null));
+
 
     public static final RegistryObject<TileEntityType<OperatingTableTileEntity>> OPERATING_TABLE_TILE_ENTITY = TILE_ENTITIES.register("operating_table_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableTileEntity(), ModContentServer.OPERATING_TABLE_BLOCK.get()).build(null));
     public static final RegistryObject<TileEntityType<OperatingTableAltTileEntity>> OPERATING_TABLE_ALT_TILE_ENTITY = TILE_ENTITIES.register("operating_table_alt_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableAltTileEntity(), ModContentServer.OPERATING_TABLE_ALT_BLOCK.get()).build(null));

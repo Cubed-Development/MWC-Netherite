@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -29,12 +30,14 @@ public class EventClient {
         for (TileEntityModelInfo<?> info : ModContentClient.TILE_ENTITY_MODEL_INFOS) {
             TileRenderer.registerModelInfo(info);
 
-            @SuppressWarnings("unchecked")
-            TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) info.type.get();
+            if (!ModList.get().isLoaded("flywheel")) {
+                @SuppressWarnings("unchecked")
+                TileEntityType<TileEntity> tileEntityType = (TileEntityType<TileEntity>) info.type.get();
 
-            Netherite.LOGGER.debug("Binding shared renderer for: {}", tileEntityType.getRegistryName());
+                Netherite.LOGGER.debug("Binding shared renderer for: {}", tileEntityType.getRegistryName());
 
-            ClientRegistry.bindTileEntityRenderer(tileEntityType, TileRenderer::new);
+                ClientRegistry.bindTileEntityRenderer(tileEntityType, TileRenderer::new);
+            }
         }
     }
 

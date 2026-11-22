@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.electronics;
+package dev.redstudio.netherite.item.containers.electric_box_open;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public final class ElectricBoxOpened extends EntityModel<Entity> {
+public final class ElectricBoxOpenModel extends EntityModel<Entity> {
 
     private final ModelRenderer ElectricBox;
     private final ModelRenderer bone5_r1;
@@ -16,7 +16,7 @@ public final class ElectricBoxOpened extends EntityModel<Entity> {
     private final ModelRenderer bone2_r1;
     private final ModelRenderer bone_r1;
 
-    public ElectricBoxOpened() {
+    public ElectricBoxOpenModel() {
         textureWidth = 128;
         textureHeight = 128;
 

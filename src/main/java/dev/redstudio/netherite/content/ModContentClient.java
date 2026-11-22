@@ -1,6 +1,7 @@
 package dev.redstudio.netherite.content;
 
 import dev.redstudio.netherite.Netherite;
+import dev.redstudio.netherite.content.flywheel.FlywheelCompact;
 import dev.redstudio.netherite.item.TileEntityModelInfo;
 import dev.redstudio.netherite.item.barrier.BarrierModel;
 import dev.redstudio.netherite.item.caution_sign.CautionSignModel;
@@ -9,7 +10,8 @@ import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxModel;
-import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedBlock;
+import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedModel;
+import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenModel;
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedModel;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenModel;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianModel;
@@ -38,6 +40,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -87,6 +90,9 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.FRIDGE_OPEN_TILE_ENTITY, FridgeOpenModel::new, "textures/block/fridge.png");
         registerTileEntityModel(ModContent.FRIDGE_CLOSED_TILE_ENTITY, FridgeClosedModel::new, "textures/block/fridge.png");
 
+        registerTileEntityModel(ModContent.ELECTRIC_BOX_CLOSED_TILE_ENTITY, ElectricBoxClosedModel::new, "textures/block/electricbox.png");
+        registerTileEntityModel(ModContent.ELECTRIC_BOX_OPEN_TILE_ENTITY, ElectricBoxOpenModel::new, "textures/block/electricbox.png");
+
 
         registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");
         registerTileEntityModel(ModContent.OPERATING_TABLE_ALT_TILE_ENTITY, OperatingTableAltModel::new, "textures/block/operatingtable.png");
@@ -99,23 +105,14 @@ public class ModContentClient {
             RegistryObject<TileEntityType<T>> tileEntityType,
             Supplier<EntityModel<Entity>> modelSupplier,
             String textureInfo) {
-        // Register tile entity model with the supplied model and texture information
         EntityModel<Entity> model = modelSupplier.get();
         Netherite.LOGGER.info("Registering tile entity renderer with texture: {}", textureInfo);
-        TILE_ENTITY_MODEL_INFOS.add(new TileEntityModelInfo<>(tileEntityType, model, textureInfo));
-    }
 
-    public static TileEntityModelInfo<?> getTileEntityModelInfo(TileEntityType<?> type) {
-        for (TileEntityModelInfo<?> info : TILE_ENTITY_MODEL_INFOS) {
-            if (info.type.get() == type) {
-                return info;
-            }
+        TileEntityModelInfo<T> info = new TileEntityModelInfo<>(tileEntityType, model, textureInfo);
+        TILE_ENTITY_MODEL_INFOS.add(info);
+
+        if (ModList.get().isLoaded("flywheel")) {
+            ((Runnable) () -> FlywheelCompact.loadInstance(tileEntityType, info)).run();
         }
-
-        return null;
     }
-
-
-
-
 }

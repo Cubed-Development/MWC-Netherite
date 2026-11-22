@@ -82,7 +82,9 @@ minecraft {
         }
 
         client {
-            // this block needs to be here for runClient to exist
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile',
+                    "${projectDir}/build/createSrgToMcp/output.srg"
         }
 
         server {
@@ -127,6 +129,9 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
+    implementation fg.deobf("curse.maven:flywheel-486392:3535459")
+
+    //compileOnly fg.deobf("curse.maven:flywheel-486392:3535459")
     implementation fg.deobf("curse.maven:worldedit-225608:3283693")
 
 }

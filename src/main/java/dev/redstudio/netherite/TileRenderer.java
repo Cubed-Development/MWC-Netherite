@@ -40,13 +40,15 @@ public class TileRenderer extends TileEntityRenderer<TileEntity> {
         TileEntityModelInfo<?> info = MODEL_INFO_MAP.get(tileEntity.getType());
         if (info == null) return; // No model info registered
 
+        mc.getProfiler().startSection("mwcPreRender");
+
         matrixStack.push();
 
         if (tileEntity.hasWorld()) {
             matrixStack.translate(0.5D, 1.5D, 0.5D);
             matrixStack.scale(1.0F, -1.0F, -1.0F);
 
-            BlockState state = tileEntity.getWorld().getBlockState(tileEntity.getPos());
+            BlockState state = tileEntity.getBlockState();
             if (state.hasProperty(BlockStateProperties.FACING)) {
                 Direction facing = state.get(BlockStateProperties.FACING);
                 switch (facing) { //Rotation is such a small cost it doesn't even matter.
@@ -59,6 +61,7 @@ public class TileRenderer extends TileEntityRenderer<TileEntity> {
                 }
             }
         }
+        mc.getProfiler().endSection();
 
         mc.getProfiler().startSection("mwcRender");
         IVertexBuilder builder = bufferIn.getBuffer(info.renderType);
