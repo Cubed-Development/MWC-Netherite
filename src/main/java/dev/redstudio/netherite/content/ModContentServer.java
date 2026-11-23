@@ -16,6 +16,7 @@ import dev.redstudio.netherite.item.containers.filing_cabinet_open.FilingCabinet
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedBlock;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenBlock;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianBlock;
+import dev.redstudio.netherite.item.containers.trash_bin.TrashBinBlock;
 import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineBlock;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerBlock;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Block;
@@ -96,6 +97,7 @@ public class ModContentServer {
     public static final RegistryObject<Block> FILING_CABINET_CLOSED_BLOCK = registerBlockWithItem("filing_cabinet_closed", FilingCabinetClosedBlock::new);
 
     public static final RegistryObject<Block> BARREL_BLOCK = registerBlockWithItem("barrel", BarrelBlock::new);
+    public static final RegistryObject<Block> TRASH_BIN_BLOCK = registerBlockWithItem("trash_bin", TrashBinBlock::new);
 
 
     public static final RegistryObject<Block> OPERATING_TABLE_BLOCK = registerBlockWithItem("operating_table", OperatingTableBlock::new);

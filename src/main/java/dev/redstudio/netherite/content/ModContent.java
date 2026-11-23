@@ -14,6 +14,7 @@ import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabin
 import dev.redstudio.netherite.item.containers.filing_cabinet_open.FilingCabinetOpenedTileEntity;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenTileEntity;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateTileEntity;
+import dev.redstudio.netherite.item.containers.trash_bin.TrashBinTileEntity;
 import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineTileEntity;
 import dev.redstudio.netherite.item.desk.left.DeskLeftTileEntity;
 import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1TileEntity;
@@ -87,6 +88,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<FilingCabinetClosedTileEntity>> FILING_CABINET_CLOSED_TILE_ENTITY = TILE_ENTITIES.register("filing_cabinet_closed_tile_entity", () -> TileEntityType.Builder.create(() -> new FilingCabinetClosedTileEntity(), ModContentServer.FILING_CABINET_CLOSED_BLOCK.get()).build(null));
 
     public static final RegistryObject<TileEntityType<BarrierTileEntity>> BARREL_TILE_ENTITY = TILE_ENTITIES.register("barrel_tile_entity", () -> TileEntityType.Builder.create(() -> new BarrierTileEntity(), ModContentServer.BARREL_BLOCK.get()).build(null));
+    public static final RegistryObject<TileEntityType<TrashBinTileEntity>> TRASH_BIN_TILE_ENTITY = TILE_ENTITIES.register("trash_bin_tile_entity", () -> TileEntityType.Builder.create(() -> new TrashBinTileEntity(), ModContentServer.TRASH_BIN_BLOCK.get()).build(null));
 
 
     public static final RegistryObject<TileEntityType<OperatingTableTileEntity>> OPERATING_TABLE_TILE_ENTITY = TILE_ENTITIES.register("operating_table_tile_entity", () -> TileEntityType.Builder.create(() -> new OperatingTableTileEntity(), ModContentServer.OPERATING_TABLE_BLOCK.get()).build(null));

@@ -19,6 +19,7 @@ import dev.redstudio.netherite.item.containers.filing_cabinet_open.FilingCabinet
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedModel;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenModel;
 import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianModel;
+import dev.redstudio.netherite.item.containers.trash_bin.TrashBinModel;
 import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
@@ -103,6 +104,7 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.FILING_CABINET_CLOSED_TILE_ENTITY, FilingCabinetClosedModel::new, "textures/block/filingcabinet.png");
 
         registerTileEntityModel(ModContent.BARREL_TILE_ENTITY, BarrelModel::new, "textures/block/barrel.png");
+        registerTileEntityModel(ModContent.TRASH_BIN_TILE_ENTITY, TrashBinModel::new, "textures/block/trashbin.png");
 
 
         registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");

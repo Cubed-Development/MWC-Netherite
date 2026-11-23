@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.containers.trash_bin;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class TrashBin extends EntityModel<Entity> {
+public final class TrashBinModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
     private final ModelRenderer trashbin12_r1;
@@ -16,7 +16,7 @@ public final class TrashBin extends EntityModel<Entity> {
     private final ModelRenderer trashbin8_r1;
     private final ModelRenderer trashbin6_r1;
 
-    public TrashBin() {
+    public TrashBinModel() {
         textureWidth = 128;
         textureHeight = 128;
 
