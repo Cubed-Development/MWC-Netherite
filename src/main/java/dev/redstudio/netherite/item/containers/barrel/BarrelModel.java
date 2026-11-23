@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.containers.barrel;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class Barrel extends EntityModel<Entity> {
+public final class BarrelModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone13;
     private final ModelRenderer bone2;
@@ -57,7 +57,7 @@ public final class Barrel extends EntityModel<Entity> {
     private final ModelRenderer bone27;
     private final ModelRenderer bone28;
 
-    public Barrel() {
+    public BarrelModel() {
         textureWidth = 128;
         textureHeight = 128;
 

@@ -10,6 +10,7 @@ import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxModel;
+import dev.redstudio.netherite.item.containers.barrel.BarrelModel;
 import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedModel;
 import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenModel;
 import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabinetClosedBlock;
@@ -100,6 +101,8 @@ public class ModContentClient {
         registerTileEntityModel(ModContent.VENDING_MACHINE_TILE_ENTITY, VendingMachineModel::new, "textures/block/vendingmachine.png");
         registerTileEntityModel(ModContent.FILING_CABINET_OPENED_TILE_ENTITY, FilingCabinetOpenedModel::new, "textures/block/filingcabinet.png");
         registerTileEntityModel(ModContent.FILING_CABINET_CLOSED_TILE_ENTITY, FilingCabinetClosedModel::new, "textures/block/filingcabinet.png");
+
+        registerTileEntityModel(ModContent.BARREL_TILE_ENTITY, BarrelModel::new, "textures/block/barrel.png");
 
 
         registerTileEntityModel(ModContent.OPERATING_TABLE_TILE_ENTITY, OperatingTableModel::new, "textures/block/operatingtable.png");

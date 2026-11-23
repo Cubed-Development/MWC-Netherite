@@ -8,6 +8,7 @@ import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Block;
 import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Block;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorBlock;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxBlock;
+import dev.redstudio.netherite.item.containers.barrel.BarrelBlock;
 import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedBlock;
 import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenBlock;
 import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabinetClosedBlock;
@@ -37,7 +38,6 @@ import dev.redstudio.netherite.item.sandbag.wall.SandbagWallBlock;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckBlock;
 import dev.redstudio.netherite.item.tv.ceiling.TVCeilingBlock;
 import dev.redstudio.netherite.item.tv.tv.TVBlock;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -95,6 +95,7 @@ public class ModContentServer {
     public static final RegistryObject<Block> FILING_CABINET_OPENED_BLOCK = registerBlockWithItem("filing_cabinet_opened", FilingCabinetOpenedBlock::new);
     public static final RegistryObject<Block> FILING_CABINET_CLOSED_BLOCK = registerBlockWithItem("filing_cabinet_closed", FilingCabinetClosedBlock::new);
 
+    public static final RegistryObject<Block> BARREL_BLOCK = registerBlockWithItem("barrel", BarrelBlock::new);
 
 
     public static final RegistryObject<Block> OPERATING_TABLE_BLOCK = registerBlockWithItem("operating_table", OperatingTableBlock::new);

@@ -4,6 +4,7 @@ import com.jozufozu.flywheel.backend.instancing.Instancer;
 import com.jozufozu.flywheel.backend.instancing.tile.TileEntityInstance;
 import com.jozufozu.flywheel.backend.material.InstanceMaterial;
 import com.jozufozu.flywheel.backend.material.MaterialManager;
+import com.jozufozu.flywheel.backend.state.TextureRenderState;
 import com.jozufozu.flywheel.core.Materials;
 import com.jozufozu.flywheel.core.materials.ModelData;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -21,7 +22,7 @@ public class EntityModelTileInstance<T extends TileEntity> extends TileEntityIns
         super(materialManager, tile);
 
         InstanceMaterial<ModelData> material =
-                materialManager.cutout(new NoCullTextureRenderState(info.texture))
+                materialManager.cutout(TextureRenderState.get(info.texture))
                         .material(Materials.TRANSFORMED);
 
         // Uses the TileEntityType registry name as the unique Flywheel cache key
