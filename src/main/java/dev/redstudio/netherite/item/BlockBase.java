@@ -52,6 +52,6 @@ public class BlockBase extends Block {
 
     @Override
     public float getAmbientOcclusionLightValue(BlockState state, IBlockReader world, BlockPos pos) {
-        return 1.0F;
+        return 0.5F;
     }
 }
