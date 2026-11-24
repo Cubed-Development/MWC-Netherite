@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props;
+package dev.redstudio.netherite.item.containers.dumpster;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,7 +13,7 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class Dumpster extends EntityModel<Entity> {
+public final class DumpsterModel extends EntityModel<Entity> {
 
     private final ModelRenderer dumpster;
     private final ModelRenderer dumpster26_r1;
@@ -22,7 +22,7 @@ public final class Dumpster extends EntityModel<Entity> {
     private final ModelRenderer dumpster10_r1;
     private final ModelRenderer dumpster3_r1;
 
-    public Dumpster() {
+    public DumpsterModel() {
         textureWidth = 256;
         textureHeight = 256;
 

@@ -13,6 +13,7 @@ import dev.redstudio.netherite.item.chair.officechair2.OfficeChair2Model;
 import dev.redstudio.netherite.item.chair.outdoor.OutdoorChairModel;
 import dev.redstudio.netherite.item.containers.ammo_box.AmmunitionBoxModel;
 import dev.redstudio.netherite.item.containers.barrel.BarrelModel;
+import dev.redstudio.netherite.item.containers.dumpster.DumpsterModel;
 import dev.redstudio.netherite.item.containers.electric_box_closed.ElectricBoxClosedModel;
 import dev.redstudio.netherite.item.containers.electric_box_open.ElectricBoxOpenModel;
 import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabinetClosedModel;
@@ -181,6 +182,8 @@ public class ModContent {
             prop("barrel", () -> BarrelModel::new, "textures/block/barrel.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> TRASH_BIN =
             prop("trash_bin", () -> TrashBinModel::new, "textures/block/trashbin.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> DUMPSTER =
+            prop("dumpster", () -> DumpsterModel::new, "textures/block/dumpster.png");
 
     // Vents
     public static final PropRegistryObject<PropBlock, PropTileEntity> VENT =
