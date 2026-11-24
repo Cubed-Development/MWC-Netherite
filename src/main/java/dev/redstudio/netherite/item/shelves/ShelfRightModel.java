@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.shelves;
+package dev.redstudio.netherite.item.shelves;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,11 +13,11 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class ShelfLeft extends EntityModel<Entity> {
+public final class ShelfRightModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
 
-    public ShelfLeft() {
+    public ShelfRightModel() {
         textureWidth = 128;
         textureHeight = 128;
 
@@ -25,9 +25,9 @@ public final class ShelfLeft extends EntityModel<Entity> {
         bone.setTextureSize(128, 128);
         bone.mirror = true;
         bone.setRotationPoint(0.0F, 24.0F, 0.0F);
-        bone.setTextureOffset(0, 0).addBox(-8.1F, -16.0F, 3.1F, 2.0F, 16.0F, 2.0F, 0.0F);
         bone.setTextureOffset(0, 0).addBox(-8.0F, -3.0F, -5.0F, 16.0F, 2.0F, 10.0F, 0.0F);
-        bone.setTextureOffset(0, 0).addBox(-8.1F, -16.0F, -5.1F, 2.0F, 16.0F, 2.0F, 0.0F);
+        bone.setTextureOffset(0, 0).addBox(6.1F, -16.0F, -5.1F, 2.0F, 16.0F, 2.0F, 0.0F);
+        bone.setTextureOffset(0, 0).addBox(6.1F, -16.0F, 3.1F, 2.0F, 16.0F, 2.0F, 0.0F);
     }
 
     @Override

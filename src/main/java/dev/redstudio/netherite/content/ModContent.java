@@ -42,6 +42,9 @@ import dev.redstudio.netherite.item.operating_table.OperatingTableModel;
 import dev.redstudio.netherite.item.pc.PCModel;
 import dev.redstudio.netherite.item.sandbag.basic.SandbagModel;
 import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
+import dev.redstudio.netherite.item.shelves.ShelfLeftModel;
+import dev.redstudio.netherite.item.shelves.ShelfRightModel;
+import dev.redstudio.netherite.item.shelves.ShelfTopModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.ceiling.TVCeilingModel;
 import dev.redstudio.netherite.item.tv.tv.TVModel;
@@ -207,4 +210,12 @@ public class ModContent {
             prop("floodlight_dual", () -> FloodlightDuelModel::new, "textures/block/duelfloodlight.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> FLOODLIGHT_TOWABLE =
             prop("floodlight_towable", () -> FloodlightTowableModel::new, "textures/block/towablefloodlight.png");
+
+    // Shelf
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SHELF_LEFT =
+            prop("shelf_left", () -> ShelfLeftModel::new, "textures/block/shelf.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SHELF_RIGHT =
+            prop("shelf_right", () -> ShelfRightModel::new, "textures/block/shelf.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SHELF_TOP =
+            prop("shelf_top", () -> ShelfTopModel::new, "textures/block/shelf.png");
 }
