@@ -36,6 +36,7 @@ import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Model;
 import dev.redstudio.netherite.item.gravestone.cross3.CrossGravestone3Model;
 import dev.redstudio.netherite.item.gravestone.skull.GravestoneSkullModel;
 import dev.redstudio.netherite.item.laptop.LaptopModel;
+import dev.redstudio.netherite.item.light.*;
 import dev.redstudio.netherite.item.operating_table.OperatingTableAltModel;
 import dev.redstudio.netherite.item.operating_table.OperatingTableModel;
 import dev.redstudio.netherite.item.pc.PCModel;
@@ -194,4 +195,16 @@ public class ModContent {
             prop("vent_end", () -> VentEndModel::new, "textures/block/vent.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> VENT_INTERSECTION =
             prop("vent_intersection", () -> VentIntersectionModel::new, "textures/block/vent.png");
+
+    // Lights
+    public static final PropRegistryObject<PropBlock, PropTileEntity> CEILING_LAMP =
+            prop("ceiling_lamp", () -> CeilingLampModel::new, "textures/block/ceilinglamp.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> CEILING_LAMP_ALT =
+            prop("ceiling_lamp_alt", () -> CeilingLampAltModel::new, "textures/block/ceilinglampalt.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> FLOODLIGHT =
+            prop("floodlight", () -> FloodlightModel::new, "textures/block/floodlight.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> FLOODLIGHT_DUAL =
+            prop("floodlight_dual", () -> FloodlightDuelModel::new, "textures/block/duelfloodlight.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> FLOODLIGHT_TOWABLE =
+            prop("floodlight_towable", () -> FloodlightTowableModel::new, "textures/block/towablefloodlight.png");
 }

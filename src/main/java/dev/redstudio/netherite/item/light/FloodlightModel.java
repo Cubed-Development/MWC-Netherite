@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.lights;
+package dev.redstudio.netherite.item.light;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class Floodlight extends EntityModel<Entity> {
+public final class FloodlightModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone5;
     private final ModelRenderer bone4;
@@ -17,7 +17,7 @@ public final class Floodlight extends EntityModel<Entity> {
     private final ModelRenderer bone3_r1;
     private final ModelRenderer bone2_r1;
 
-    public Floodlight() {
+    public FloodlightModel() {
         textureWidth = 64;
         textureHeight = 64;
 

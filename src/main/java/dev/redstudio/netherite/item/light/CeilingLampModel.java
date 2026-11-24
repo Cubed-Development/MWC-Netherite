@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.lights;
+package dev.redstudio.netherite.item.light;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -8,14 +8,14 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class CeilingLamp extends EntityModel<Entity> {
+public final class CeilingLampModel extends EntityModel<Entity> {
 
     private final ModelRenderer light;
     private final ModelRenderer light3_r1;
     private final ModelRenderer light2_r1;
     private final ModelRenderer light4_r1;
 
-    public CeilingLamp() {
+    public CeilingLampModel() {
         textureWidth = 128;
         textureHeight = 128;
 

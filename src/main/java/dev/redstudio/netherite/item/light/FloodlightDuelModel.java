@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.lights;
+package dev.redstudio.netherite.item.light;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,7 +13,7 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class FloodlightDuel extends EntityModel<Entity> {
+public final class FloodlightDuelModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone11;
     private final ModelRenderer bone10;
@@ -24,7 +24,7 @@ public final class FloodlightDuel extends EntityModel<Entity> {
     private final ModelRenderer bone2;
     private final ModelRenderer bone;
 
-    public FloodlightDuel() {
+    public FloodlightDuelModel() {
         textureWidth = 128;
         textureHeight = 128;
 
