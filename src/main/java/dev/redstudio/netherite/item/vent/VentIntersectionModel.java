@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.vents;
+package dev.redstudio.netherite.item.vent;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,11 +13,11 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class Vent extends EntityModel<Entity> {
+public final class VentIntersectionModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
 
-    public Vent() {
+    public VentIntersectionModel() {
         textureWidth = 128;
         textureHeight = 128;
 
@@ -25,7 +25,7 @@ public final class Vent extends EntityModel<Entity> {
         bone.setTextureSize(128, 128);
         bone.mirror = true;
         bone.setRotationPoint(0.0F, 24.0F, 0.0F);
-        bone.setTextureOffset(0, 40).addBox(-7.5F, -15.5F, -0.5F, 15.0F, 15.0F, 1.0F, 0.0F);
+        bone.setTextureOffset(0, 0).addBox(-8.0F, -15.0F, -7.0F, 1.0F, 14.0F, 14.0F, 0.0F);
         bone.setTextureOffset(0, 0).addBox(-7.0F, -15.0F, -8.0F, 14.0F, 14.0F, 16.0F, 0.0F);
     }
 

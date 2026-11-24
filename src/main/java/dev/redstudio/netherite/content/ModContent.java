@@ -43,6 +43,10 @@ import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.ceiling.TVCeilingModel;
 import dev.redstudio.netherite.item.tv.tv.TVModel;
+import dev.redstudio.netherite.item.vent.VentCornerModel;
+import dev.redstudio.netherite.item.vent.VentEndModel;
+import dev.redstudio.netherite.item.vent.VentIntersectionModel;
+import dev.redstudio.netherite.item.vent.VentModel;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
@@ -177,4 +181,14 @@ public class ModContent {
             prop("barrel", () -> BarrelModel::new, "textures/block/barrel.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> TRASH_BIN =
             prop("trash_bin", () -> TrashBinModel::new, "textures/block/trashbin.png");
+
+    // Vents
+    public static final PropRegistryObject<PropBlock, PropTileEntity> VENT =
+            prop("vent", () -> VentModel::new, "textures/block/vent.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> VENT_CORNER =
+            prop("vent_corner", () -> VentCornerModel::new, "textures/block/vent.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> VENT_END =
+            prop("vent_end", () -> VentEndModel::new, "textures/block/vent.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> VENT_INTERSECTION =
+            prop("vent_intersection", () -> VentIntersectionModel::new, "textures/block/vent.png");
 }

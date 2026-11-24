@@ -1,5 +1,5 @@
 
-package dev.redstudio.netherite.props.vents;
+package dev.redstudio.netherite.item.vent;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -13,11 +13,11 @@ import net.minecraft.entity.Entity;
  * @author Developer: Desoroxx
  */
 @SuppressWarnings({"FieldCanBeLocal", "NullableProblems"})
-public final class VentEnd extends EntityModel<Entity> {
+public final class VentEndModel extends EntityModel<Entity> {
 
     private final ModelRenderer bone;
 
-    public VentEnd() {
+    public VentEndModel() {
         textureWidth = 128;
         textureHeight = 128;
 
