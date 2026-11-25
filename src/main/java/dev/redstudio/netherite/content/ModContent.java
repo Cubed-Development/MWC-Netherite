@@ -6,6 +6,9 @@ import dev.redstudio.netherite.item.PropBlock;
 import dev.redstudio.netherite.item.PropTileEntity;
 import dev.redstudio.netherite.item.SittablePropBlock;
 import dev.redstudio.netherite.item.barrier.BarrierModel;
+import dev.redstudio.netherite.item.bodys.BodyBagModel;
+import dev.redstudio.netherite.item.bodys.BodyHangingModel;
+import dev.redstudio.netherite.item.bodys.BodyImpaledModel;
 import dev.redstudio.netherite.item.caution_sign.CautionSignModel;
 import dev.redstudio.netherite.item.chair.homechair.HomeChairModel;
 import dev.redstudio.netherite.item.chair.officechair1.OfficeChair1Model;
@@ -20,9 +23,16 @@ import dev.redstudio.netherite.item.containers.filing_cabinet_closed.FilingCabin
 import dev.redstudio.netherite.item.containers.filing_cabinet_open.FilingCabinetOpenedModel;
 import dev.redstudio.netherite.item.containers.fridge_closed.FridgeClosedModel;
 import dev.redstudio.netherite.item.containers.fridge_open.FridgeOpenModel;
-import dev.redstudio.netherite.item.containers.russian_crate.WeaponCrateRussianModel;
+import dev.redstudio.netherite.item.containers.lockers.LockerModel;
+import dev.redstudio.netherite.item.containers.lockers.SCPLockerModel;
+import dev.redstudio.netherite.item.containers.weapon.WeaponCaseModel;
+import dev.redstudio.netherite.item.containers.weapon.WeaponCaseSmallModel;
+import dev.redstudio.netherite.item.containers.weapon.WeaponCrateRussianModel;
 import dev.redstudio.netherite.item.containers.trash_bin.TrashBinModel;
 import dev.redstudio.netherite.item.containers.vending_machine.VendingMachineModel;
+import dev.redstudio.netherite.item.containers.weapon.WeaponLockerModel;
+import dev.redstudio.netherite.item.containers.wooden_crate.WoodenCrateModel;
+import dev.redstudio.netherite.item.containers.wooden_crate.WoodenCrateOpenedModel;
 import dev.redstudio.netherite.item.desk.corner.DeskCornerModel;
 import dev.redstudio.netherite.item.desk.corneralt1.DeskCornerAlt1Model;
 import dev.redstudio.netherite.item.desk.left.DeskLeftModel;
@@ -30,6 +40,8 @@ import dev.redstudio.netherite.item.desk.leftalt1.DeskLeftAlt1Model;
 import dev.redstudio.netherite.item.desk.middle.DeskMiddleModel;
 import dev.redstudio.netherite.item.desk.right.DeskRightModel;
 import dev.redstudio.netherite.item.desk.rightalt1.DeskRightAlt1Model;
+import dev.redstudio.netherite.item.forklift.ForkLiftAltModel;
+import dev.redstudio.netherite.item.forklift.ForkliftModel;
 import dev.redstudio.netherite.item.gravestone.GravestoneModel;
 import dev.redstudio.netherite.item.gravestone.cross.CrossGravestoneModel;
 import dev.redstudio.netherite.item.gravestone.cross2.CrossGravestone2Model;
@@ -45,13 +57,13 @@ import dev.redstudio.netherite.item.sandbag.wall.SandbagWallModel;
 import dev.redstudio.netherite.item.shelves.ShelfLeftModel;
 import dev.redstudio.netherite.item.shelves.ShelfRightModel;
 import dev.redstudio.netherite.item.shelves.ShelfTopModel;
+import dev.redstudio.netherite.item.spooky.SpookyGhostModel;
+import dev.redstudio.netherite.item.spooky.SpookyScarecrowModel;
 import dev.redstudio.netherite.item.swat_truck.SwatTruckModel;
 import dev.redstudio.netherite.item.tv.ceiling.TVCeilingModel;
 import dev.redstudio.netherite.item.tv.tv.TVModel;
-import dev.redstudio.netherite.item.vent.VentCornerModel;
-import dev.redstudio.netherite.item.vent.VentEndModel;
-import dev.redstudio.netherite.item.vent.VentIntersectionModel;
-import dev.redstudio.netherite.item.vent.VentModel;
+import dev.redstudio.netherite.item.vent.*;
+import dev.redstudio.netherite.item.servers.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
@@ -166,8 +178,6 @@ public class ModContent {
     // Containers & Appliances
     public static final PropRegistryObject<PropBlock, PropTileEntity> AMMUNITION_BOX =
             prop("ammunition_box", () -> AmmunitionBoxModel::new, "textures/block/ammobox.png");
-    public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CRATE_RUSSIAN =
-            prop("weapon_crate_russian", () -> WeaponCrateRussianModel::new, "textures/block/militarycrate.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> FRIDGE_OPEN =
             prop("fridge_open", () -> FridgeOpenModel::new, "textures/block/fridge.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> FRIDGE_CLOSED =
@@ -188,6 +198,20 @@ public class ModContent {
             prop("trash_bin", () -> TrashBinModel::new, "textures/block/trashbin.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> DUMPSTER =
             prop("dumpster", () -> DumpsterModel::new, "textures/block/dumpster.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WOODEN_CRATE =
+            prop("wooden_crate", () -> WoodenCrateModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WOODEN_CRATE_OPENED =
+            prop("wooden_crate_opened", () -> WoodenCrateOpenedModel::new, "textures/block/todo.png");
+
+    // Weapon containers
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CRATE_RUSSIAN =
+            prop("weapon_crate_russian", () -> WeaponCrateRussianModel::new, "textures/block/militarycrate.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CASE =
+            prop("weapon_case", () -> WeaponCaseModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CASE_SMALL =
+            prop("weapon_case_small", () -> WeaponCaseSmallModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_LOCKER =
+            prop("weapon_locker", () -> WeaponLockerModel::new, "textures/block/todo.png");
 
     // Vents
     public static final PropRegistryObject<PropBlock, PropTileEntity> VENT =
@@ -218,4 +242,48 @@ public class ModContent {
             prop("shelf_right", () -> ShelfRightModel::new, "textures/block/shelf.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> SHELF_TOP =
             prop("shelf_top", () -> ShelfTopModel::new, "textures/block/shelf.png");
+
+    // Servers
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_EMPTY_LEFT =
+            prop("server_rack_empty_left", () -> ServerRackEmptyLeftModel::new, "textures/block/serverrackempty.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_EMPTY_RIGHT =
+            prop("server_rack_empty_right", () -> ServerRackEmptyRightModel::new, "textures/block/serverrackempty.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_LEFT =
+            prop("server_rack_left", () -> ServerRackLeftModel::new, "textures/block/serverrackleft.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_LEFT_ALT =
+            prop("server_rack_left_alt", () -> ServerRackLeftAltModel::new, "textures/block/serverrackleftalt.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_LEFT_ALT2 =
+            prop("server_rack_left_alt2", () -> ServerRackLeftAlt2Model::new, "textures/block/serverrackleftalt2.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_LEFT_ALT3 =
+            prop("server_rack_left_alt3", () -> ServerRackLeftAlt3Model::new, "textures/block/serverrackleftalt3.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_RIGHT =
+            prop("server_rack_right", () -> ServerRackRightModel::new, "textures/block/serverrackright.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_RIGHT_ALT =
+            prop("server_rack_right_alt", () -> ServerRackRightAltModel::new, "textures/block/serverrackrightalt.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_TOP =
+            prop("server_rack_top", () -> ServerRackTopModel::new, "textures/block/serverrackleft.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SERVER_RACK_TOP_RIGHT =
+            prop("server_rack_top_right", () -> ServerRackTopRightModel::new, "textures/block/serverrackright.png");
+
+    public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_BAG =
+            prop("body_bag", () -> BodyBagModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_HANGING =
+            prop("body_hanging", () -> BodyHangingModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_IMPALED =
+            prop("body_impaled", () -> BodyImpaledModel::new, "textures/block/todo.png");
+
+    public static final PropRegistryObject<PropBlock, PropTileEntity> FORKLIFT =
+            prop("forklift", () -> ForkliftModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> FORKLIFT_ALT =
+            prop("forklift_alt", () -> ForkLiftAltModel::new, "textures/block/todo.png");
+
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SPOOKY_SCARECROW =
+            prop("spooky_scarecrow", () -> SpookyScarecrowModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SPOOKY_GHOST =
+            prop("spooky_ghost", () -> SpookyGhostModel::new, "textures/block/todo.png");
+
+    public static final PropRegistryObject<PropBlock, PropTileEntity> LOCKER =
+            prop("locker", () -> LockerModel::new, "textures/block/todo.png");
+    public static final PropRegistryObject<PropBlock, PropTileEntity> SCP_LOCKER =
+            prop("locker_scp", () -> SCPLockerModel::new, "textures/block/todo.png");
 }
