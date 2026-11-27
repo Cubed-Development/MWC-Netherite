@@ -273,17 +273,17 @@ public class ModContent {
             prop("body_impaled", () -> BodyImpaledModel::new, "textures/block/todo.png");
 
     public static final PropRegistryObject<PropBlock, PropTileEntity> FORKLIFT =
-            prop("forklift", () -> ForkliftModel::new, "textures/block/todo.png");
+            prop("forklift", () -> ForkliftModel::new, "textures/block/forklift.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> FORKLIFT_ALT =
-            prop("forklift_alt", () -> ForkLiftAltModel::new, "textures/block/todo.png");
+            prop("forklift_alt", () -> ForkLiftAltModel::new, "textures/block/forkliftalt.png");
 
     public static final PropRegistryObject<PropBlock, PropTileEntity> SPOOKY_SCARECROW =
-            prop("spooky_scarecrow", () -> SpookyScarecrowModel::new, "textures/block/todo.png");
+            prop("spooky_scarecrow", () -> SpookyScarecrowModel::new, "textures/block/scarecrow.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> SPOOKY_GHOST =
-            prop("spooky_ghost", () -> SpookyGhostModel::new, "textures/block/todo.png");
+            prop("spooky_ghost", () -> SpookyGhostModel::new, "textures/block/spookyghost.png");
 
     public static final PropRegistryObject<PropBlock, PropTileEntity> LOCKER =
-            prop("locker", () -> LockerModel::new, "textures/block/todo.png");
+            prop("locker", () -> LockerModel::new, "textures/block/locker.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> SCP_LOCKER =
-            prop("locker_scp", () -> SCPLockerModel::new, "textures/block/todo.png");
+            prop("locker_scp", () -> SCPLockerModel::new, "textures/block/scplocker.png");
 }
