@@ -199,19 +199,19 @@ public class ModContent {
     public static final PropRegistryObject<PropBlock, PropTileEntity> DUMPSTER =
             prop("dumpster", () -> DumpsterModel::new, "textures/block/dumpster.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> WOODEN_CRATE =
-            prop("wooden_crate", () -> WoodenCrateModel::new, "textures/block/todo.png");
+            prop("wooden_crate", () -> WoodenCrateModel::new, "textures/block/woodencrate.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> WOODEN_CRATE_OPENED =
-            prop("wooden_crate_opened", () -> WoodenCrateOpenedModel::new, "textures/block/todo.png");
+            prop("wooden_crate_opened", () -> WoodenCrateOpenedModel::new, "textures/block/woodencrateopened.png");
 
     // Weapon containers
     public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CRATE_RUSSIAN =
             prop("weapon_crate_russian", () -> WeaponCrateRussianModel::new, "textures/block/militarycrate.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CASE =
-            prop("weapon_case", () -> WeaponCaseModel::new, "textures/block/todo.png");
+            prop("weapon_case", () -> WeaponCaseModel::new, "textures/block/gun_case.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_CASE_SMALL =
-            prop("weapon_case_small", () -> WeaponCaseSmallModel::new, "textures/block/todo.png");
+            prop("weapon_case_small", () -> WeaponCaseSmallModel::new, "textures/block/gun_case_small.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> WEAPON_LOCKER =
-            prop("weapon_locker", () -> WeaponLockerModel::new, "textures/block/todo.png");
+            prop("weapon_locker", () -> WeaponLockerModel::new, "textures/block/gunrack.png");
 
     // Vents
     public static final PropRegistryObject<PropBlock, PropTileEntity> VENT =
@@ -266,11 +266,11 @@ public class ModContent {
             prop("server_rack_top_right", () -> ServerRackTopRightModel::new, "textures/block/serverrackright.png");
 
     public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_BAG =
-            prop("body_bag", () -> BodyBagModel::new, "textures/block/todo.png");
+            prop("body_bag", () -> BodyBagModel::new, "textures/block/bodybag.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_HANGING =
-            prop("body_hanging", () -> BodyHangingModel::new, "textures/block/todo.png");
+            prop("body_hanging", () -> BodyHangingModel::new, "textures/block/bodyhanging.png");
     public static final PropRegistryObject<PropBlock, PropTileEntity> BODY_IMPALED =
-            prop("body_impaled", () -> BodyImpaledModel::new, "textures/block/todo.png");
+            prop("body_impaled", () -> BodyImpaledModel::new, "textures/block/bodyimpaled.png");
 
     public static final PropRegistryObject<PropBlock, PropTileEntity> FORKLIFT =
             prop("forklift", () -> ForkliftModel::new, "textures/block/forklift.png");
